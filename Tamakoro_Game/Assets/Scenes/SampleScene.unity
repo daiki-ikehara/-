@@ -321,6 +321,22 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3392330253100510051}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &874951162
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874951156}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,6 +748,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6250984520699446245, guid: 7396087c9f6ef7149bcfdafbe6917c2d,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 592405288638079651, guid: 7396087c9f6ef7149bcfdafbe6917c2d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -740,7 +761,7 @@ PrefabInstance:
     - target: {fileID: 592405288638079651, guid: 7396087c9f6ef7149bcfdafbe6917c2d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.423
+      value: 0.654
       objectReference: {fileID: 0}
     - target: {fileID: 592405288638079651, guid: 7396087c9f6ef7149bcfdafbe6917c2d,
         type: 3}
@@ -806,6 +827,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sphere
+      objectReference: {fileID: 0}
+    - target: {fileID: 8853099277042698468, guid: 7396087c9f6ef7149bcfdafbe6917c2d,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7396087c9f6ef7149bcfdafbe6917c2d, type: 3}
