@@ -13,6 +13,7 @@ public class Gravity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        var body = GameObject.Find("Sphere").GetComponent<Rigidbody>();
+        body.WakeUp();
     }
 }
