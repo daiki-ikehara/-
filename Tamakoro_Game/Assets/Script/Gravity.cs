@@ -12,11 +12,4 @@ public class Gravity : MonoBehaviour
     {
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.tag == "Floor")
-        {
-            Debug.Log("当たった");
-        }
-    }
 }

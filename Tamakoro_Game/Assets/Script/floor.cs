@@ -2,65 +2,92 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class floor : MonoBehaviour
 {
-    float speed = 90;
-    float lowspeed = 60;
+    const float V = 1.0f;
 
-    float MaxRotate = 30;
-    float MinRotate = -30;
+    float v = V;//速さ
+    //	移動量
+    float a = 0.5f;//加速度
+    float MaxSpeed = 90f;
 
+    float lowspeed = 60f;
 
-    // Start is called before the first frame update
-    void Start()
+    float flag = 0;
+
+    private void Update()
     {
 
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-        float x = Input.GetAxisRaw("Horizontal");
-        float y = Input.GetAxisRaw("Vertical");
-        float step = speed * Time.deltaTime;
-        float Angle = transform.eulerAngles.z;
+        float x = Input.GetAxis("Horizontal");
+        float y = Input.GetAxis("Vertical");
 
-        if (Angle> 180)
+
+        if (x != 0 || y != 0)
         {
-            // -180～180となるように補正
-            Angle = Angle - 360;
-        }
-
-        if (x == 1)
-        {
-            Debug.Log("右");
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0, -30), step);
-            Debug.Log(Angle);
-
-        }
-        else if (x == -1)
-        {
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0, 30), step);
-        }
-        else if (y == 1)
-        {
-
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(30, 0, 0), step);
-        }
-        else if (y == -1)
-        {
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(-30, 0, 0), step);
+            if (v <= MaxSpeed)//９０fまで加速
+            {
+                v += a;
+            }
+            if (x > 0)
+            {
+                flag = 1;//右のふらぐおん
+            }
+            else if (x < 0)
+            {
+                flag = 2;
+            }
+            else if (y > 0)
+            {
+                flag = 3;
+            }
+            else if (y < 0)
+            {
+                flag = 4;
+            }
         }
         else
         {
+            if (flag == 1 || flag == 2 || flag == 3 || flag == 4)
+            {
+
+                v -= a;//減速
+
+            }
+
+            if (v < V)//１より小さくなったら１にもどるす
+            {
+                v = V;
+                // transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0f, 0), 90 * Time.deltaTime);
+            }
+        }
+
+        if (v != V)//加速しているとき（傾いているとき）
+        {
+            if (flag == 1)
+            {
+
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0f, -30), v * Time.deltaTime);
+            }
+            if (flag == 2)
+            {
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0f, 30), v * Time.deltaTime);
+            }
+
+            if (flag == 3)
+            {
+
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(30, 0f, 0), v * Time.deltaTime);
+            }
+            if (flag == 4)
+            {
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(-30, 0f, 0), v * Time.deltaTime);
+            }
 
 
         }
-
-
-
+        //Debug.Log(v);
     }
-
-
 }
