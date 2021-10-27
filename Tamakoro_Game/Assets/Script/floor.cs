@@ -12,7 +12,7 @@ public class floor : MonoBehaviour
     float a = 0.3f;//加速度
     
 
-    float Minspeed = 60f;
+  
 
     float flag = 0;
     float lowflag = 0;
