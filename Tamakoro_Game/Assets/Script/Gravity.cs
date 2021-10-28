@@ -4,25 +4,23 @@ using UnityEngine;
 
 public class Gravity : MonoBehaviour
 {
-    int Time = 0;
-    private void Start()
+    private Transform myTransform;
+    private Vector3 pos;
+    private float Gravity2;
+    private float totalFallTime = 0f;
+
+    void Start()
     {
-        
+        myTransform = GetComponent<Transform>();
+        pos = myTransform.position;
+        Gravity2 = -9.81f;
     }
-    private void Update()
+
+    void Update()
     {
-        this.transform.position += new Vector3(0, -0.005f, 0);
-    }
-    void OnTriggerStay(Collider other)
-    {
-        Debug.Log("当たった");
-        while(Time <= 500){
-            if (Time / 5 == 0)
-            {
-                this.transform.position += new Vector3(0, 0.005f, 0);
-            }
-            Time++;
-        }
-        Time = 0;
+        totalFallTime += Time.deltaTime;
+        pos.y += (Gravity2 * Time.deltaTime) * totalFallTime;         //y座標への加算
+
+        myTransform.position = pos;     //座標を設定
     }
 }
