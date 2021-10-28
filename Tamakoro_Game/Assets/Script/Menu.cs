@@ -36,7 +36,7 @@ public class Menu : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown("joystick button 9") && xB == 0)
+        if (Input.GetKeyDown("joystick button 7") && xB == 0)
         {
 
             Time.timeScale = 0;  // 時間停止
@@ -44,16 +44,16 @@ public class Menu : MonoBehaviour
 
             xB++;
 
-            Debug.Log("button9");
+            Debug.Log("button7 or 9");
         }
-        else if (Input.GetKeyDown("joystick button 9") && xB == 1)
+        else if (Input.GetKeyDown("joystick button 7") && xB == 1)
         {
             Time.timeScale = 1;  // 再開
             pausePanel.SetActive(false);
 
             xB--;
 
-            Debug.Log("button9");
+            Debug.Log("button7 or 9");
         }
     }
 
