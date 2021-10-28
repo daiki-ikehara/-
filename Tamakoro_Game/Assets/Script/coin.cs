@@ -11,7 +11,7 @@ public class coin : MonoBehaviour
 			// アイテムが消える
 			Destroy(gameObject);
 			count = count + 1;
-			//Debug.Log(count);
+			Debug.Log(count);
 		}
 	}
 }
