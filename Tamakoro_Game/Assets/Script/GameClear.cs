@@ -8,7 +8,7 @@ public class GameClear : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if (coin.count == 2)
+		if (coin.count == 12)
 		{
 			Time.timeScale = 0f;
 			clearPanel.SetActive(true);
