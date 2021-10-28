@@ -4,10 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class ItemCount: MonoBehaviour
+public class ItemCount : MonoBehaviour
 {
     public Text scoreText; //Text用変数
     private int count = 0; //スコア計算用変数
+
 
     void Start()
     {
