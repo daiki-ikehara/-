@@ -19,7 +19,21 @@ public class Menu : MonoBehaviour
     {
         if (Input.GetKeyDown("joystick button 7") && xB == 0)
         {
+            Time.timeScale = 0;  // 時間停止
+            pausePanel.SetActive(true);
 
+            xB++;
+
+            Debug.Log("button7");
+        }
+        else if (Input.GetKeyDown("joystick button 7") && xB == 1)
+        {
+            Time.timeScale = 1;  // 再開
+            pausePanel.SetActive(false);
+
+            xB--;
+
+            Debug.Log("button7");
         }
     }
 }
