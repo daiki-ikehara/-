@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class floor : MonoBehaviour
 {
-    float adRotate = 27f;        //回転の速さ
+    float adRotate = 27.8f;        //回転の速さ
     float zRotate = 0;      //z座標(上、下)への回転座標
     float xRotate = 0;      //x座標(右、左)への回転座標
     float totalMoveTime = 0f;       //スティック入力時の経過時間
@@ -33,7 +33,7 @@ public class floor : MonoBehaviour
         //上
         if (0 < xRota && xRota <= 1)
         {
-            flag = 1;
+            
             if(zRota == 0)
             
                 totalMoveTime = Mathf.Clamp(totalMoveTime += Time.deltaTime, 0, 1);
@@ -46,6 +46,8 @@ public class floor : MonoBehaviour
             {
                 DecelerateXP = totalMoveTime;
                 DecelerateHozon = DecelerateXP / 60;
+
+              
             }
             else
             {
@@ -67,6 +69,11 @@ public class floor : MonoBehaviour
             {
                 DecelerateXM = totalMoveTime;
                 DecelerateHozon = DecelerateXM / 60;
+
+                if (tmp != flag)
+                {
+                    Debug.Log("a");
+                }   
             }
             else
             {
