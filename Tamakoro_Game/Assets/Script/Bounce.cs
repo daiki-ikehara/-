@@ -4,28 +4,44 @@ using UnityEngine;
 
 public class Bounce : MonoBehaviour
 {
-    //ボールが当たった物体の法線ベクトル
-    private Vector3 objNomalVector = Vector3.zero;
-    // ボールのrigidbody
-    private Rigidbody rb;
-    // 跳ね返った後のverocity
-    [HideInInspector] public Vector3 afterReflectVero = Vector3.zero;
-
-    public void OnCollisionEnter(Collision collision)
-    {
-        // 当たった物体の法線ベクトルを取得
-        objNomalVector = collision.contacts[0].normal;
-        Vector3 reflectVec = Vector3.Reflect(afterReflectVero, objNomalVector);
-        rb.velocity = reflectVec;
-        // 計算した反射ベクトルを保存
-        afterReflectVero = rb.velocity;
-        Debug.Log("nomal:" + afterReflectVero);
-    }
+    private Transform Object;
+    private Vector3 Center;
+    private float x;
+    private float y;
+    private float z;
+    private float radius = 0.1f;
+    private float cubeX = 1f;
+    private float cubeY = 0.05f;
+    private float cubeZ = 1f;
 
     // Use this for initialization
-    void Start()
+    private void Start()
     {
-        rb = this.GetComponent<Rigidbody>();
+        Object = GetComponent<Transform>();
+        Center = Object.position;
+    }
+    private void Update()
+    {
+        x = Center.x;
+        y = Center.y;
+        z = Center.z;
+        if (this.gameObject.tag == "Floor")
+        {
+            x = Center.x;
+            y = Center.y;
+            z = Center.z;
+        }
+        if (this.gameObject.tag == "Ball")
+        {
+            
+        }
+        if (this.gameObject.tag == "Coin")
+        {
+        }
     }
 }
 
+////ボールが当たった物体の法線ベクトル
+//private Vector3 objNomalVector = Vector3.zero;
+//// 跳ね返った後のverocity
+//[HideInInspector] public Vector3 afterReflectVero = Vector3.zero;
