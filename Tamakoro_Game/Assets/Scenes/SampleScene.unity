@@ -422,7 +422,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 177.5, y: -59}
+  m_AnchoredPosition: {x: 110, y: -59}
   m_SizeDelta: {x: 300, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &115199441
@@ -905,7 +905,11 @@ PrefabInstance:
         type: 3}
       propertyPath: pausePanel
       value: 
+<<<<<<< HEAD
+      objectReference: {fileID: 1915898638}
+=======
       objectReference: {fileID: 111915234}
+>>>>>>> 57a6640b366c56022812f8a66b3c3a169b3591b2
     m_RemovedComponents:
     - {fileID: 6745177675606442720, guid: 7b28346058350d849a42a5710fd389c3, type: 3}
     - {fileID: 6745177675606442723, guid: 7b28346058350d849a42a5710fd389c3, type: 3}
@@ -2286,6 +2290,20 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ReStart
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 3782130526558269535, guid: 7c679aa7e74afc84b88b0c5ec7bb159b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7106434792457883132, guid: 7b28346058350d849a42a5710fd389c3,
+        type: 3}
+    - target: {fileID: 3782130526558269535, guid: 7c679aa7e74afc84b88b0c5ec7bb159b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Title
+      objectReference: {fileID: 0}
+=======
+>>>>>>> 57a6640b366c56022812f8a66b3c3a169b3591b2
     m_RemovedComponents:
     - {fileID: 1436174948899935927, guid: 7c679aa7e74afc84b88b0c5ec7bb159b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7c679aa7e74afc84b88b0c5ec7bb159b, type: 3}
@@ -2689,10 +2707,14 @@ MonoBehaviour:
     LensShift: {x: 0, y: 0}
     GateFit: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_SensorSize: {x: 1.8592592, y: 1}
 =======
     m_SensorSize: {x: 2.0918367, y: 1}
 >>>>>>> 57a6640b366c56022812f8a66b3c3a169b3591b2
+=======
+    m_SensorSize: {x: 1.8040712, y: 1}
+>>>>>>> d0c6779d4108546baa30b0ac9f4d4090fcc23250
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2734,6 +2756,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_YPosition: 1.467575
   m_ZPosition: -1.258089
+--- !u!1 &1915898638 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3782130526186953015, guid: 7c679aa7e74afc84b88b0c5ec7bb159b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1492970614}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1922483340
 GameObject:
   m_ObjectHideFlags: 0
