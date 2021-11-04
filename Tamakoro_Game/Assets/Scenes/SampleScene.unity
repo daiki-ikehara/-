@@ -382,6 +382,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 85454274}
   m_CullTransparentMesh: 0
+--- !u!1 &111915234 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3782130526186953015, guid: 7c679aa7e74afc84b88b0c5ec7bb159b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1492970614}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &115199439
 GameObject:
   m_ObjectHideFlags: 0
@@ -891,7 +897,11 @@ PrefabInstance:
         type: 3}
       propertyPath: pausePanel
       value: 
+<<<<<<< HEAD
       objectReference: {fileID: 1915898638}
+=======
+      objectReference: {fileID: 111915234}
+>>>>>>> 57a6640b366c56022812f8a66b3c3a169b3591b2
     m_RemovedComponents:
     - {fileID: 6745177675606442720, guid: 7b28346058350d849a42a5710fd389c3, type: 3}
     - {fileID: 6745177675606442723, guid: 7b28346058350d849a42a5710fd389c3, type: 3}
@@ -1293,7 +1303,6 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
-  - component: {fileID: 963194230}
   - component: {fileID: 963194231}
   m_Layer: 0
   m_Name: Main Camera
@@ -1401,19 +1410,6 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &963194230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1218aca98e0471f49ba442d66312aa18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clearPanel: {fileID: 1447803881}
 --- !u!114 &963194231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2254,6 +2250,7 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ReStart
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 3782130526558269535, guid: 7c679aa7e74afc84b88b0c5ec7bb159b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2265,6 +2262,8 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Title
       objectReference: {fileID: 0}
+=======
+>>>>>>> 57a6640b366c56022812f8a66b3c3a169b3591b2
     m_RemovedComponents:
     - {fileID: 1436174948899935927, guid: 7c679aa7e74afc84b88b0c5ec7bb159b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7c679aa7e74afc84b88b0c5ec7bb159b, type: 3}
@@ -2532,6 +2531,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 115199441}
+--- !u!114 &1663357685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663357679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1218aca98e0471f49ba442d66312aa18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clearPanel: {fileID: 1447803881}
 --- !u!1 &1736609305
 GameObject:
   m_ObjectHideFlags: 0
