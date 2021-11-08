@@ -5,30 +5,31 @@ using UnityEngine.UI;
 
 public class TimerController : MonoBehaviour
 {
-    private float countTime = 4;
-    private int second;
-    public Text timeCount;
-    [SerializeField] GameObject startCount;
-
+    public Text countDownText;
+    [SerializeField] GameObject panel;
     private void Start()
     {
-        Invoke("DelayMethod", 4f);
+        Time.timeScale = 0f;
+        StartCoroutine("CountDown");
     }
-    void Update()
 
+
+    IEnumerator CountDown()
     {
-        countTime -= Time.deltaTime;
-        second = (int)countTime;
-        //(int)countTimeでint型に変換して表示させる。
-        timeCount.text = second.ToString();
-        if (countTime <= 1)
+        
+        for (int i = 2; i >= 0; i--)
         {
-            timeCount.text = "GO";
+            yield return new WaitForSecondsRealtime(1);//1秒待つ
+            countDownText.text = i.ToString();
+            if (i == 0)
+            {
+                countDownText.text = "スタート".ToString();
+            }
+            
         }
-    }
-    void DelayMethod()
-    {
-        startCount.SetActive(false);
-    }
+        yield return new WaitForSecondsRealtime(1);//1秒待つ
+        panel.SetActive(false);
+        Time.timeScale = 1f;
 
+    }
 }
