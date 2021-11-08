@@ -16,8 +16,10 @@ public class floor : MonoBehaviour
     float DecelerateZM = 0f;    //Z- 方向
     float DecelerateHozon = 0f;
 
-    float tmp;
+    float tmp=0;
     float flag;
+    float Decelerate;
+    
     int count = 0;      //未使用
     int f = 0;
     // Use this for initialization
@@ -33,21 +35,30 @@ public class floor : MonoBehaviour
         //上
         if (0 < xRota && xRota <= 1)
         {
-            
-            if(zRota == 0)
-            
+
+            if (zRota == 0)
+            {
+                //入力
+              
+
+                
+                
                 totalMoveTime = Mathf.Clamp(totalMoveTime += Time.deltaTime, 0, 1);
+            }
             
+            //移動の計算
             xRotate = Mathf.Clamp(xRotate + (adRotate * Time.deltaTime) * totalMoveTime, -30, 30);
+
+            
             transform.eulerAngles = new Vector3(xRotate, 0, zRotate);
 
-            tmp = flag;
             if (xRotate > 0)
             {
                 DecelerateXP = totalMoveTime;
                 DecelerateHozon = DecelerateXP / 60;
-
-              
+                
+                //Debug.Log(DecelerateHozon);
+               
             }
             else
             {
@@ -57,23 +68,22 @@ public class floor : MonoBehaviour
         //下
         if (0 > xRota && xRota >= -1)
         {
-            flag = 2;
-            tmp = flag;
+            
             if (zRota == 0)
             {
+                
+                
                 totalMoveTime = Mathf.Clamp(totalMoveTime += Time.deltaTime, 0, 1);
             }
             xRotate = Mathf.Clamp(xRotate - (adRotate * Time.deltaTime) * totalMoveTime, -30, 30);
             transform.eulerAngles = new Vector3(xRotate, 0, zRotate);
+           
             if (xRotate < 0)
             {
                 DecelerateXM = totalMoveTime;
                 DecelerateHozon = DecelerateXM / 60;
+                Decelerate = 1;
 
-                if (tmp != flag)
-                {
-                    Debug.Log("a");
-                }   
             }
             else
             {
@@ -83,13 +93,13 @@ public class floor : MonoBehaviour
         //左
         if (0 < zRota && zRota <= 1)
         {
-            flag = 3;
-            tmp = flag;
-            if(zRotate != -30)
-            {
-                f++;
-                //Debug.Log(f);
-            }
+
+            //if(zRotate != -30)
+            //{
+            //    f++;
+            //    //Debug.Log(f);
+            //}
+           
             totalMoveTime = Mathf.Clamp(totalMoveTime += Time.deltaTime, 0, 1);
             zRotate = Mathf.Clamp(zRotate - (adRotate * Time.deltaTime) * totalMoveTime, -30, 30);
             transform.eulerAngles = new Vector3(xRotate, 0, zRotate);
@@ -106,11 +116,13 @@ public class floor : MonoBehaviour
         //右
         if (0 > zRota && zRota >= -1)
         {
-            flag = 4;
-            tmp = flag;
+
+            
             totalMoveTime = Mathf.Clamp(totalMoveTime += Time.deltaTime, 0, 1);
             zRotate = Mathf.Clamp(zRotate + (adRotate * Time.deltaTime) * totalMoveTime, -30, 30);
+           
             transform.eulerAngles = new Vector3(xRotate, 0, zRotate);
+            
             if (zRotate > 0)
             {
                 DecelerateZM = totalMoveTime;
@@ -126,55 +138,82 @@ public class floor : MonoBehaviour
         {
             //加速度リセット
             totalMoveTime = 0f;
-            //上に戻る
+            
+
             if (xRotate < 0)
             {
+                //直前のスティックの傾きを格納
+                
+
                 //下に減速
                 if (DecelerateXM > 0 && xRotate != -30)
                 {
-                    DecelerateXM -= DecelerateHozon;
-                    xRotate = Mathf.Clamp(xRotate - (adRotate * Time.deltaTime * DecelerateXM), -30, 0);
-                    transform.eulerAngles = new Vector3(xRotate, 0, zRotate);
+                    flag = 1;
+                    tmp = flag;
+                        DecelerateXM -= DecelerateHozon;
+                        xRotate = Mathf.Clamp(xRotate - (adRotate * Time.deltaTime * DecelerateXM), -30, 0);
+                        transform.eulerAngles = new Vector3(xRotate, 0, zRotate);
+
+                    if (tmp != flag)
+                    {
+                        Debug.Log("ok");
+                    }
+                    
 
                 }
                 else
                 {
+
                     DecelerateXM = 0f;
                     //上に加速
                     totalMoveBackTimeX += Time.deltaTime;
                     xRotate = Mathf.Clamp(xRotate + (adRotate * Time.deltaTime) * totalMoveBackTimeX, -30, 0);
                     transform.eulerAngles = new Vector3(xRotate, 0, zRotate);
+                    flag = 0;//水平に戻ったらフラグをもとに戻す
 
                 }
             }
             //下に戻る
-            if (xRotate > 0)
+            if (xRotate > 0)//スティックが上に（床がueに傾いてり）
             {
+               
+
                 //上に減速
-                if (DecelerateXP > 0 && xRotate != 30)
+                if (DecelerateXP > 0 && xRotate != 30)//減速している
                 {
                     DecelerateXP -= DecelerateHozon;
                     xRotate = Mathf.Clamp(xRotate + ((adRotate * Time.deltaTime) * DecelerateXP), 0, 30);
                     transform.eulerAngles = new Vector3(xRotate, 0, zRotate);
+
+                    flag = 2;
+                    tmp = flag;
+                    
                 }
                 else
                 {
-                    DecelerateXP = 0f;
+                    DecelerateXP = 0f;//水平に戻ろうとしている
                     //下に加速
                     totalMoveBackTimeX += Time.deltaTime;
                     xRotate = Mathf.Clamp(xRotate - (adRotate * Time.deltaTime) * totalMoveBackTimeX, 0, 30);
                     transform.eulerAngles = new Vector3(xRotate, 0, zRotate);
+                    flag= 0;//水平に戻ったらフラグをもとに戻す
+                    
                 }
             }
             //左に戻る
             if (zRotate < 0)
             {
+               
+
                 //右に減速
                 if (DecelerateZP > 0 && zRotate != 30)
                 {
                     DecelerateZP -= DecelerateHozon;
                     zRotate = Mathf.Clamp(zRotate - ((adRotate * Time.deltaTime) * DecelerateZP), -30, 0);
                     transform.eulerAngles = new Vector3(xRotate, 0, zRotate);
+
+                    flag = 3;
+                    
                 }
                 else
                 {
@@ -183,6 +222,7 @@ public class floor : MonoBehaviour
                     totalMoveBackTimeZ += Time.deltaTime;
                     zRotate = Mathf.Clamp(zRotate + (adRotate * Time.deltaTime) * totalMoveBackTimeZ, -30, 0);
                     transform.eulerAngles = new Vector3(xRotate, 0, zRotate);
+                    flag = 0;
                 }
             }
             //右に戻る
@@ -193,6 +233,9 @@ public class floor : MonoBehaviour
                     DecelerateZM -= DecelerateHozon;
                     zRotate = Mathf.Clamp(zRotate + ((adRotate * Time.deltaTime) * DecelerateZM), 0, 30);
                     transform.eulerAngles = new Vector3(xRotate, 0, zRotate);
+
+                    flag = 4;
+                    
                 }
                 else
                 {
@@ -201,8 +244,13 @@ public class floor : MonoBehaviour
                     totalMoveBackTimeZ += Time.deltaTime;
                     zRotate = Mathf.Clamp(zRotate - (adRotate * Time.deltaTime) * totalMoveBackTimeZ, 0, 30);
                     transform.eulerAngles = new Vector3(xRotate, 0, zRotate);
+                    flag = 0;
                 }
+
+
             }
+
+            
         }
         //加速度リセット
         if (xRota != 0)
@@ -214,11 +262,8 @@ public class floor : MonoBehaviour
             totalMoveBackTimeZ = 0f;
         }
 
+        Debug.Log(flag);
 
-        if (tmp != flag)
-        {
-            Debug.Log("ok");
-        }
 
     }
 
