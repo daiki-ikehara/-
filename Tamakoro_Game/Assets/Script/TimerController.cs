@@ -27,7 +27,7 @@ public class TimerController : MonoBehaviour
             }
             
         }
-        yield return new WaitForSecondsRealtime(1);//1秒待つ
+        yield return new WaitForSecondsRealtime(0.5f);//0.5秒待つ
         panel.SetActive(false);
         Time.timeScale = 1f;
 
