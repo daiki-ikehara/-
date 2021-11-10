@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class TimerController : MonoBehaviour
 {
+
     public Text countDownText;
     [SerializeField] GameObject panel;
     private void Start()
@@ -29,7 +30,6 @@ public class TimerController : MonoBehaviour
         }
         yield return new WaitForSecondsRealtime(0.5f);//0.5秒待つ
         panel.SetActive(false);
-        Time.timeScale = 1f;
-
+        Time.timeScale = 1;
     }
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4465785, g: 0.49641275, b: 0.5748151, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657892, g: 0.49641353, b: 0.5748163, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1626,7 +1626,7 @@ GameObject:
   - component: {fileID: 1004208098}
   - component: {fileID: 1004208097}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: CountCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1917,7 +1917,7 @@ GameObject:
   - component: {fileID: 1372109283}
   - component: {fileID: 1372109282}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: ResultCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2266,7 +2266,7 @@ GameObject:
   - component: {fileID: 1447803883}
   - component: {fileID: 1447803882}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: ClearCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2639,6 +2639,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clearPanel: {fileID: 1447803881}
+  resultPanel: {fileID: 0}
+  result: 0
+--- !u!114 &1663357686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663357679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8b07aeddbefe79448d652bce02f36f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 534842981}
+  resultpanel: {fileID: 301921815}
 --- !u!54 &1663357687
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2776,7 +2792,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8123621, y: 1}
+    m_SensorSize: {x: 2.0918367, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

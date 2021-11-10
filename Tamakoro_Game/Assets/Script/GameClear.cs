@@ -5,12 +5,9 @@ using UnityEngine.UI;
 public class GameClear : MonoBehaviour
 {
 	[SerializeField] GameObject clearPanel;
-<<<<<<< HEAD
 	[SerializeField] GameObject resultPanel;
 
 	public int result;
-=======
->>>>>>> 6aa27ebd8ad13d27bb18c7fad4b8c87dae174129
 	// Update is called once per frame
 	int count = 0;
 	private void Start()
@@ -25,7 +22,7 @@ public class GameClear : MonoBehaviour
 			count += 1;
 		}
 
-		if (count == 1)
+		if (count == 12)
 		{
 			Time.timeScale = 0;
 			clearPanel.SetActive(true);
@@ -42,7 +39,7 @@ public class GameClear : MonoBehaviour
 
 	IEnumerator panelfalse()
 	{
-		if(count==1)
+		if(count==12)
 		yield return new WaitForSecondsRealtime(1);
 		clearPanel.SetActive(false);
 	}
