@@ -2639,7 +2639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clearPanel: {fileID: 1447803881}
-  resultPanel: {fileID: 0}
+  resultPanel: {fileID: 1372109281}
   result: 0
 --- !u!114 &1663357686
 MonoBehaviour:

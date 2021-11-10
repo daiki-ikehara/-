@@ -22,7 +22,7 @@ public class GameClear : MonoBehaviour
 			count += 1;
 		}
 
-		if (count == 12)
+		if (count == 1)
 		{
 			Time.timeScale = 0;
 			clearPanel.SetActive(true);
@@ -30,6 +30,7 @@ public class GameClear : MonoBehaviour
 			
 		}
 		StartCoroutine("panelfalse");
+		resultPanel.SetActive(false);
 	}
 	private void Update()
 	{
@@ -39,8 +40,9 @@ public class GameClear : MonoBehaviour
 
 	IEnumerator panelfalse()
 	{
-		if(count==12)
+		if(count==1)
 		yield return new WaitForSecondsRealtime(1);
 		clearPanel.SetActive(false);
+		resultPanel.SetActive(true);
 	}
 }
