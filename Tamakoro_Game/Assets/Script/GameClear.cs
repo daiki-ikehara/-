@@ -27,7 +27,7 @@ public class GameClear : MonoBehaviour
 			Time.timeScale = 0;
 			clearPanel.SetActive(true);
 			result = 1;
-			
+
 		}
 		StartCoroutine("panelfalse");
 		resultPanel.SetActive(false);
@@ -40,8 +40,8 @@ public class GameClear : MonoBehaviour
 
 	IEnumerator panelfalse()
 	{
-		if(count==1)
-		yield return new WaitForSecondsRealtime(1);
+		if (count == 1)
+			yield return new WaitForSecondsRealtime(1);
 		clearPanel.SetActive(false);
 		resultPanel.SetActive(true);
 	}
