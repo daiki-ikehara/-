@@ -6,6 +6,8 @@ public class GameClear : MonoBehaviour
 {
 	[SerializeField] GameObject clearPanel;
 	[SerializeField] GameObject resultPanel;
+
+	public int result;
 	// Update is called once per frame
 	int count = 0;
 	private void Start()
@@ -20,10 +22,12 @@ public class GameClear : MonoBehaviour
 			count += 1;
 		}
 
-		if (count == 12)
+		if (count == 1)
 		{
 			Time.timeScale = 0;
 			clearPanel.SetActive(true);
+			result = 1;
+			
 		}
 		StartCoroutine("panelfalse");
 	}
@@ -35,7 +39,7 @@ public class GameClear : MonoBehaviour
 
 	IEnumerator panelfalse()
 	{
-		if(count==12)
+		if(count==1)
 		yield return new WaitForSecondsRealtime(1);
 		clearPanel.SetActive(false);
 	}
