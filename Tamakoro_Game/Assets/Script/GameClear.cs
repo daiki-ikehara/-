@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class GameClear : MonoBehaviour
 {
 	[SerializeField] GameObject clearPanel;
-	[SerializeField] GameObject resultPanel;
 	// Update is called once per frame
 	int count = 0;
 	private void Start()
