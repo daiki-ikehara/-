@@ -4,14 +4,10 @@ using UnityEngine;
 
 public class Gravity : MonoBehaviour
 {
-    private Transform myTransform;
-    private Vector3 pos;
-    private float gravity;
-    private float totalFallTime = 0f;
-    private float totalBounceTime = 0f;
-    private float bounce = 0.02f;
-    private float height;
-    private float Count = 0;
+    public Transform myTransform;
+    public Vector3 pos;
+    public float gravity;
+    public float totalFallTime = 0f;
     GameObject floor;
     GameObject ball;
     GameObject coin;
@@ -22,7 +18,6 @@ public class Gravity : MonoBehaviour
         myTransform = GetComponent<Transform>();
         pos = myTransform.position;
         gravity = -9.81f;
-        height = pos.y;
     }
 
     void Update()
@@ -33,21 +28,12 @@ public class Gravity : MonoBehaviour
             floor = GameObject.Find("Cube");
             col = floor.GetComponent<collisiondetection>();
             //重力
+            totalFallTime += Time.deltaTime;
+            pos.y += (gravity * Time.deltaTime) * totalFallTime;         //y座標への加算
+            myTransform.position = pos;     //座標を設定
             if (col.floorY + 0.1f <= pos.y - col.radius)
             {
-                totalFallTime += Time.deltaTime;
-                pos.y += (gravity * Time.deltaTime) * totalFallTime;         //y座標への加算
-                myTransform.position = pos;     //座標を設定
-            }
-            else
-            {
                 totalFallTime = 0;
-                while (pos.y <= height / 2 || bounce > 0)
-                {
-                    pos.y += bounce;
-                    bounce -= 0.002f;
-                }
-                height = pos.y;
             }
 
         }
