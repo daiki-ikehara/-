@@ -10,7 +10,7 @@ public class GameClear : MonoBehaviour
 
 	public int result;
 	// Update is called once per frame
-	int count = 0;
+	public int count = 0;
 	private void Start()
 	{
 		
