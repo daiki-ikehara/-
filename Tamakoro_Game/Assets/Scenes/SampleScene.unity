@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 25601622}
   - component: {fileID: 25601621}
   m_Layer: 5
-  m_Name: pausePanel
+  m_Name: RetryPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -608,9 +608,9 @@ GameObject:
   - component: {fileID: 161404327}
   - component: {fileID: 161404326}
   - component: {fileID: 161404325}
-  - component: {fileID: 161404324}
+  - component: {fileID: 161404328}
   m_Layer: 5
-  m_Name: ReStartButton
+  m_Name: RetryButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -636,18 +636,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 60}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &161404324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 161404322}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78ba48f99eb0bb84e9f4c71ac666a5f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &161404325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -738,6 +726,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 161404322}
   m_CullTransparentMesh: 0
+--- !u!114 &161404328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161404322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a7a86e1fb438cc42b3d6b8fc93564d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &248530404
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -878,6 +878,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 12800000, guid: 784e8728bcb07b449b7f39ec867dbc5b,
         type: 3}
+    - target: {fileID: 2129307467974060728, guid: 1b2955e20986eab49ac5b0f3f36a545f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2129307467974060729, guid: 1b2955e20986eab49ac5b0f3f36a545f,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1486,7 +1491,7 @@ GameObject:
   - component: {fileID: 575806363}
   - component: {fileID: 575806362}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Retry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
