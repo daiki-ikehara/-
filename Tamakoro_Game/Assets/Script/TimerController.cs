@@ -8,6 +8,8 @@ public class TimerController : MonoBehaviour
 
     public Text countDownText;
     [SerializeField] GameObject panel;
+    public int time = 0;
+
     private void Start()
     {
         Time.timeScale = 0f;
@@ -25,6 +27,7 @@ public class TimerController : MonoBehaviour
             if (i == 0)
             {
                 countDownText.text = "スタート".ToString();
+                time = 1;
             }
             
         }
