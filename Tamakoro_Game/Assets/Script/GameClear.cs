@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class GameClear : MonoBehaviour
 {
+	[SerializeField]private ParticleSystem paper;
 	[SerializeField] GameObject clearPanel;
 	[SerializeField] GameObject resultPanel;
 
@@ -12,6 +13,7 @@ public class GameClear : MonoBehaviour
 	int count = 0;
 	private void Start()
 	{
+		
 		count = 0;
 	}
 	void OnCollisionEnter(Collision collision)
@@ -27,14 +29,18 @@ public class GameClear : MonoBehaviour
 			Time.timeScale = 0;
 			clearPanel.SetActive(true);
 			result = 1;
-
+			paper.Play();
 		}
+        else
+        {
+			paper.Stop();
+        }
 		StartCoroutine("panelfalse");
 		resultPanel.SetActive(false);
 	}
 	private void Update()
 	{
-
+	
 	}
 
 
