@@ -10,6 +10,8 @@ public class Effect : MonoBehaviour
     private Rigidbody rb;
     [SerializeField]
     private ParticleSystem shockwave;
+    [SerializeField]
+    private ParticleSystem getcoin;
 
     void Start()
     {
@@ -27,6 +29,14 @@ public class Effect : MonoBehaviour
         else
         {
             shockwave.Stop();
+        }
+        if (collision.gameObject.tag == "coin")
+        {
+            getcoin.Play();
+        }
+        else
+        {
+            getcoin.Stop();
         }
     }
             void Update()
