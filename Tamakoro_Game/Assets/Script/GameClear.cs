@@ -26,7 +26,7 @@ public class GameClear : MonoBehaviour
             count += 1;
         }
 
-        if (count == 1)
+        if (count == 12)
         {
 
             Time.timeScale = 0;
@@ -62,13 +62,13 @@ public class GameClear : MonoBehaviour
 
     IEnumerator panelfalse()
     {
-        if (count == 1)
+        if (count == 12)
         {
             yield return new WaitForSecondsRealtime(1);
         }
         clearPanel.SetActive(false);
 
-        if (count == 1 && !clearPanel.activeSelf)
+        if (count == 12 && !clearPanel.activeSelf)
         {
             resultPanel.SetActive(true);
             resultflg = true;
