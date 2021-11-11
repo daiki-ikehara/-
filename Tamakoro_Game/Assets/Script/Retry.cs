@@ -9,6 +9,7 @@ public class Retry : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameClear.retryflg = false;
         RetryPanel.SetActive(false);
     }
 
@@ -20,14 +21,6 @@ public class Retry : MonoBehaviour
             RetryPanel.SetActive(true);
         }
 
-        if (ReStartButton.f == true)
-        {
-            RetryPanel.SetActive(false);
-        }
 
-        if (TitleButton.t == true)
-        {
-            RetryPanel.SetActive(false);
-        }
     }
 }
