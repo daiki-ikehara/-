@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Menu : MonoBehaviour
 {
     [SerializeField] private GameObject pausePanel;
+    
     int xB = 0;
 
     // Start is called before the first frame update
@@ -23,6 +24,7 @@ public class Menu : MonoBehaviour
             pausePanel.SetActive(true);
 
             xB++;
+            Debug.Log(xB);
 
             Debug.Log("button7");
         }
