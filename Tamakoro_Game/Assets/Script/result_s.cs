@@ -7,6 +7,7 @@ public class result_s : MonoBehaviour
 {
     [SerializeField] GameObject panel;
     float countTime = 0;
+  
     public Text scoreText;
     public Text Time_text;
 
@@ -22,22 +23,20 @@ public class result_s : MonoBehaviour
     {
         int minutes = Mathf.FloorToInt(countTime / 60F);
         int seconds = Mathf.FloorToInt(countTime - minutes * 60);
-       
 
+        countTime += Time.deltaTime;
+       ;
 
-        if (ItemCount.count == 12)
-        { 
-            scoreText.text = string.Format("所得したコイン　{0}/12",ItemCount.count);
+        if (ItemCount.count == 1)
+        {
+            
+            scoreText.text = string.Format("所得したコイン　{0}/12枚",ItemCount.count);
             Time_text.text = string.Format("かかった時間　{0:00}:{1:00}", minutes, seconds);
         }
         
-        if (panel.activeSelf)
-        {
-            Debug.Log("はかってない");
-        }
         
-            countTime += Time.deltaTime;
-            Debug.Log(countTime);
-        
+
+
+       
     }
 }
