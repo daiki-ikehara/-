@@ -4,51 +4,75 @@ using UnityEngine.UI;
 
 public class GameClear : MonoBehaviour
 {
-	[SerializeField]private ParticleSystem paper;
-	[SerializeField] GameObject clearPanel;
-	[SerializeField] GameObject resultPanel;
+    [SerializeField] GameObject clearPanel;
+    [SerializeField] private ParticleSystem paper;
+    [SerializeField] GameObject resultPanel;
 
-	public int result;
-	// Update is called once per frame
-	public int count = 0;
-	private void Start()
-	{
-		
-		count = 0;
-	}
-	void OnCollisionEnter(Collision collision)
-	{
-		//        string yourTag = collision.gameObject.tag;
-		if (collision.gameObject.tag == "coin")
-		{
-			count += 1;
-		}
+    public static bool resultflg = false;
+    public static bool retryflg = false;
 
-		if (count == 12)
-		{
-			Time.timeScale = 0;
-			clearPanel.SetActive(true);
-			result = 1;
-			paper.Play();
-		}
+
+    // Update is called once per frame
+   public int count = 0;
+    private void Start()
+    {
+        count = 0;
+    }
+    void OnCollisionEnter(Collision collision)
+    {
+        //        string yourTag = collision.gameObject.tag;
+        if (collision.gameObject.tag == "coin")
+        {
+            count += 1;
+        }
+
+        if (count == 12)
+        {
+
+            Time.timeScale = 0;
+            clearPanel.SetActive(true);
+            paper.Play();
+
+        }
         else
         {
-			paper.Stop();
+            paper.Stop();
         }
-		StartCoroutine("panelfalse");
-		resultPanel.SetActive(false);
-	}
-	private void Update()
-	{
-	
-	}
+        StartCoroutine("panelfalse");
+        resultPanel.SetActive(false);
+
+    }
+    private void Update()
+    {
+
+        if (resultflg == true)
+        {
+            if (Input.GetKeyDown("joystick button 1") || Input.GetKeyDown("joystick button 2"))
+            {
+                Debug.Log("ok");
+                resultPanel.SetActive(false);
+                retryflg = true;
+
+            }
+        }
 
 
-	IEnumerator panelfalse()
-	{
-		if (count == 12)
-			yield return new WaitForSecondsRealtime(1);
-		clearPanel.SetActive(false);
-		resultPanel.SetActive(true);
-	}
+    }
+
+
+    IEnumerator panelfalse()
+    {
+        if (count == 12)
+        {
+            yield return new WaitForSecondsRealtime(1);
+        }
+        clearPanel.SetActive(false);
+
+        if (count == 12 && !clearPanel.activeSelf)
+        {
+            resultPanel.SetActive(true);
+            resultflg = true;
+
+        }
+    }
 }

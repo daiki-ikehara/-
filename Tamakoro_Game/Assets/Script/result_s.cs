@@ -27,7 +27,7 @@ public class result_s : MonoBehaviour
         countTime += Time.deltaTime;
        ;
 
-        if (ItemCount.count == 1)
+        if (ItemCount.count == 12)
         {
             
             scoreText.text = string.Format("所得したコイン　{0}/12枚",ItemCount.count);
