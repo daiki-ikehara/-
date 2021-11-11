@@ -17332,10 +17332,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1218aca98e0471f49ba442d66312aa18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paper: {fileID: 999296926}
   clearPanel: {fileID: 1447803881}
+  paper: {fileID: 999296926}
   resultPanel: {fileID: 1372109281}
-  result: 0
   count: 0
 --- !u!114 &1663357686
 MonoBehaviour:
@@ -17644,7 +17643,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7358024, y: 1}
+    m_SensorSize: {x: 1.8054054, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
