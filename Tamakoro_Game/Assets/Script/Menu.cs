@@ -7,6 +7,9 @@ public class Menu : MonoBehaviour
 {
     [SerializeField] private GameObject pausePanel;
     int xB = 0;
+    int bcount;
+    public GameClear clear;
+    public TimerController start;
 
     // Start is called before the first frame update
     void Start()
@@ -17,23 +20,26 @@ public class Menu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("joystick button 7") && xB == 0)
+        if (clear.count != 12 && start.time == 1)
         {
-            Time.timeScale = 0;  // 時間停止
-            pausePanel.SetActive(true);
+            if (Input.GetKeyDown("joystick button 7") && xB == 0)
+            {
+                Time.timeScale = 0;  // 時間停止
+                pausePanel.SetActive(true);
 
-            xB++;
+                xB++;
 
-            Debug.Log("button7");
-        }
-        else if (Input.GetKeyDown("joystick button 7") && xB == 1)
-        {
-            Time.timeScale = 1;  // 再開
-            pausePanel.SetActive(false);
+                Debug.Log("button7");
+            }
+            else if (Input.GetKeyDown("joystick button 7") && xB == 1)
+            {
+                Time.timeScale = 1;  // 再開
+                pausePanel.SetActive(false);
 
-            xB--;
+                xB--;
 
-            Debug.Log("button7");
+                Debug.Log("button7");
+            }
         }
     }
 }
