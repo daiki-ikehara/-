@@ -9,8 +9,8 @@ using Cinemachine;
 public class LockCamera : CinemachineExtension
 {
     [Tooltip("カメラのY.Z座標を固定する値")]
-    public  float m_YPosition = 1.467575f;
-    public  float m_ZPosition = -1.258089f;
+    public  float m_YPosition = 1.274454f;
+    //public  float m_ZPosition = -1.258089f;
 
 
 
@@ -20,7 +20,7 @@ public class LockCamera : CinemachineExtension
         {
             var pos = state.RawPosition;
             pos.y = m_YPosition;
-            pos.z = m_ZPosition;
+            //pos.z = m_ZPosition;
             state.RawPosition = pos;
         }
     }
