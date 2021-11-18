@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4465785, g: 0.49641275, b: 0.5748151, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657892, g: 0.49641353, b: 0.5748163, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5946,8 +5946,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e104a078b6ee14e44a9c31a3ec743974, type: 2}
-  - {fileID: 2100000, guid: e104a078b6ee14e44a9c31a3ec743974, type: 2}
+  - {fileID: 2100000, guid: 19e0af29cd4638241944ed62aa8986fc, type: 2}
+  - {fileID: 2100000, guid: aac8c2d15db78104ba4efcddca91ba0e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6242,9 +6242,9 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     startSize:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0.3
-      minScalar: 1
+      minMaxState: 3
+      scalar: 0.1
+      minScalar: 0.2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -6295,7 +6295,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -6348,7 +6348,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -6824,7 +6824,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 30
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -10850,6 +10850,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f65ca78bef8fe8b4596d443a24bdf662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zRotate: 0
+  xRotate: 0
 --- !u!4 &874951161 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6778917849068668353, guid: 24bfdb6266495d844b2c30c8994c0210,
@@ -10887,6 +10889,8 @@ MonoBehaviour:
   floorX: 0
   floorY: 0
   floorZ: 0
+  RotateX: 0
+  RotateZ: 0
   radius: 0.1
   coinX: 0
   coinY: 0
@@ -22034,6 +22038,8 @@ MonoBehaviour:
   floorX: 0
   floorY: 0
   floorZ: 0
+  RotateX: 0
+  RotateZ: 0
   radius: 0.1
   coinX: 0
   coinY: 0
@@ -22050,6 +22056,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 252f93287b3343645b862df1ffd55663, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Coinsound: {fileID: 8300000, guid: 5da9b505053b6f144bf3c50280f3868e, type: 3}
+  Heartsound: {fileID: 8300000, guid: 1843a7e6de0ef1a458bee77ba99a8e6c, type: 3}
 --- !u!82 &1663357692
 AudioSource:
   m_ObjectHideFlags: 0
@@ -22146,18 +22154,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1663357693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1663357679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8a3b1cb43127fa4292ad14823fbe256, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1663357694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22556,7 +22552,11 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
+<<<<<<< HEAD
     m_SensorSize: {x: 1.8465346, y: 1}
+=======
+    m_SensorSize: {x: 2.0170317, y: 1}
+>>>>>>> 45ecfb9595c1374f60a757601177e37bed4a8715
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
