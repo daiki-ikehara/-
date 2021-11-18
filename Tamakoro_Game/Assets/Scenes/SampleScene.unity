@@ -1226,8 +1226,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e104a078b6ee14e44a9c31a3ec743974, type: 2}
-  - {fileID: 2100000, guid: e104a078b6ee14e44a9c31a3ec743974, type: 2}
+  - {fileID: 2100000, guid: 19e0af29cd4638241944ed62aa8986fc, type: 2}
+  - {fileID: 2100000, guid: aac8c2d15db78104ba4efcddca91ba0e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1522,9 +1522,9 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     startSize:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0.3
-      minScalar: 1
+      minMaxState: 3
+      scalar: 0.1
+      minScalar: 0.2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1575,7 +1575,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -1628,7 +1628,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -2104,7 +2104,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 50
+      scalar: 30
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -6130,6 +6130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f65ca78bef8fe8b4596d443a24bdf662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zRotate: 0
+  xRotate: 0
 --- !u!4 &874951161 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6778917849068668353, guid: 24bfdb6266495d844b2c30c8994c0210,
@@ -6167,6 +6169,8 @@ MonoBehaviour:
   floorX: 0
   floorY: 0
   floorZ: 0
+  RotateX: 0
+  RotateZ: 0
   radius: 0.1
   coinX: 0
   coinY: 0
@@ -17393,6 +17397,8 @@ MonoBehaviour:
   floorX: 0
   floorY: 0
   floorZ: 0
+  RotateX: 0
+  RotateZ: 0
   radius: 0.1
   coinX: 0
   coinY: 0
