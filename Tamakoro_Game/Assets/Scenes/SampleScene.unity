@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657892, g: 0.49641353, b: 0.5748163, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465785, g: 0.49641275, b: 0.5748151, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -17517,6 +17517,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8a3b1cb43127fa4292ad14823fbe256, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1663357694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663357679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 020c202f4ea1a8741a6981f8b42366c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   Heart: {fileID: 632618996}
 --- !u!1 &1721890887
 GameObject:
@@ -17903,7 +17915,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0170317, y: 1}
+    m_SensorSize: {x: 2.0272276, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
