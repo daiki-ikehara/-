@@ -1,13 +1,13 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class floor : MonoBehaviour
+public class BallMove : MonoBehaviour
 {
+
     float adRotate = 27.8f;        //回転の速さ
-    public float zRotate = 0;      //z座標(上、下)への回転座標
-    public float xRotate = 0;      //x座標(右、左)への回転座標
+    float zRotate = 0;      //z座標(上、下)への回転座標
+    float xRotate = 0;      //x座標(右、左)への回転座標
     float totalMoveTime = 0f;       //スティック入力時の経過時間
     float totalMoveBackTimeX = 0f, totalMoveBackTimeZ = 0f; //ニュートラル時の経過時間
     float DecelerateXP = 0f;    //X+ 方向
@@ -16,10 +16,10 @@ public class floor : MonoBehaviour
     float DecelerateZM = 0f;    //Z- 方向
     float DecelerateHozon = 0f;
 
-    float tmp=0;
+    float tmp = 0;
     float flag;
     float Decelerate;
-    
+
     int count = 0;      //未使用
     int f = 0;
     // Use this for initialization
@@ -39,26 +39,26 @@ public class floor : MonoBehaviour
             if (zRota == 0)
             {
                 //入力
-              
 
-                
-                
+
+
+
                 totalMoveTime = Mathf.Clamp(totalMoveTime += Time.deltaTime, 0, 1);
             }
-            
+
             //移動の計算
             xRotate = Mathf.Clamp(xRotate + (adRotate * Time.deltaTime) * totalMoveTime, -30, 30);
 
-            
+
             transform.eulerAngles = new Vector3(xRotate, 0, zRotate);
 
             if (xRotate > 0)
             {
                 DecelerateXP = totalMoveTime;
                 DecelerateHozon = DecelerateXP / 60;
-                
+
                 //Debug.Log(DecelerateHozon);
-               
+
             }
             else
             {
@@ -68,16 +68,16 @@ public class floor : MonoBehaviour
         //下
         if (0 > xRota && xRota >= -1)
         {
-            
+
             if (zRota == 0)
             {
-                
-                
+
+
                 totalMoveTime = Mathf.Clamp(totalMoveTime += Time.deltaTime, 0, 1);
             }
             xRotate = Mathf.Clamp(xRotate - (adRotate * Time.deltaTime) * totalMoveTime, -30, 30);
             transform.eulerAngles = new Vector3(xRotate, 0, zRotate);
-           
+
             if (xRotate < 0)
             {
                 DecelerateXM = totalMoveTime;
@@ -99,7 +99,7 @@ public class floor : MonoBehaviour
             //    f++;
             //    //Debug.Log(f);
             //}
-           
+
             totalMoveTime = Mathf.Clamp(totalMoveTime += Time.deltaTime, 0, 1);
             zRotate = Mathf.Clamp(zRotate - (adRotate * Time.deltaTime) * totalMoveTime, -30, 30);
             transform.eulerAngles = new Vector3(xRotate, 0, zRotate);
@@ -117,12 +117,12 @@ public class floor : MonoBehaviour
         if (0 > zRota && zRota >= -1)
         {
 
-            
+
             totalMoveTime = Mathf.Clamp(totalMoveTime += Time.deltaTime, 0, 1);
             zRotate = Mathf.Clamp(zRotate + (adRotate * Time.deltaTime) * totalMoveTime, -30, 30);
-           
+
             transform.eulerAngles = new Vector3(xRotate, 0, zRotate);
-            
+
             if (zRotate > 0)
             {
                 DecelerateZM = totalMoveTime;
@@ -138,27 +138,27 @@ public class floor : MonoBehaviour
         {
             //加速度リセット
             totalMoveTime = 0f;
-            
+
 
             if (xRotate < 0)
             {
                 //直前のスティックの傾きを格納
-                
+
 
                 //下に減速
                 if (DecelerateXM > 0 && xRotate != -30)
                 {
                     flag = 1;
                     tmp = flag;
-                        DecelerateXM -= DecelerateHozon;
-                        xRotate = Mathf.Clamp(xRotate - (adRotate * Time.deltaTime * DecelerateXM), -30, 0);
-                        transform.eulerAngles = new Vector3(xRotate, 0, zRotate);
+                    DecelerateXM -= DecelerateHozon;
+                    xRotate = Mathf.Clamp(xRotate - (adRotate * Time.deltaTime * DecelerateXM), -30, 0);
+                    transform.eulerAngles = new Vector3(xRotate, 0, zRotate);
 
                     if (tmp != flag)
                     {
                         Debug.Log("ok");
                     }
-                    
+
 
                 }
                 else
@@ -176,7 +176,7 @@ public class floor : MonoBehaviour
             //下に戻る
             if (xRotate > 0)//スティックが上に（床がueに傾いてり）
             {
-               
+
 
                 //上に減速
                 if (DecelerateXP > 0 && xRotate != 30)//減速している
@@ -187,7 +187,7 @@ public class floor : MonoBehaviour
 
                     flag = 2;
                     tmp = flag;
-                    
+
                 }
                 else
                 {
@@ -196,14 +196,14 @@ public class floor : MonoBehaviour
                     totalMoveBackTimeX += Time.deltaTime;
                     xRotate = Mathf.Clamp(xRotate - (adRotate * Time.deltaTime) * totalMoveBackTimeX, 0, 30);
                     transform.eulerAngles = new Vector3(xRotate, 0, zRotate);
-                    flag= 0;//水平に戻ったらフラグをもとに戻す
-                    
+                    flag = 0;//水平に戻ったらフラグをもとに戻す
+
                 }
             }
             //左に戻る
             if (zRotate < 0)
             {
-               
+
 
                 //右に減速
                 if (DecelerateZP > 0 && zRotate != 30)
@@ -213,7 +213,7 @@ public class floor : MonoBehaviour
                     transform.eulerAngles = new Vector3(xRotate, 0, zRotate);
 
                     flag = 3;
-                    
+
                 }
                 else
                 {
@@ -235,7 +235,7 @@ public class floor : MonoBehaviour
                     transform.eulerAngles = new Vector3(xRotate, 0, zRotate);
 
                     flag = 4;
-                    
+
                 }
                 else
                 {
@@ -250,7 +250,7 @@ public class floor : MonoBehaviour
 
             }
 
-            
+
         }
         //加速度リセット
         if (xRota != 0)
@@ -266,6 +266,10 @@ public class floor : MonoBehaviour
 
 
     }
-
-    
 }
+
+
+////ボールが当たった物体の法線ベクトル
+//private Vector3 objNomalVector = Vector3.zero;
+//// 跳ね返った後のverocity
+//[HideInInspector] public Vector3 afterReflectVero = Vector3.zero;
