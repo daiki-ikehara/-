@@ -1197,7 +1197,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 19e0af29cd4638241944ed62aa8986fc, type: 2}
+  - {fileID: 2100000, guid: e104a078b6ee14e44a9c31a3ec743974, type: 2}
   - {fileID: 2100000, guid: aac8c2d15db78104ba4efcddca91ba0e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -1325,7 +1325,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -1494,8 +1494,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.1
-      minScalar: 0.2
+      scalar: 0.05
+      minScalar: 0.1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2075,7 +2075,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 30
+      scalar: 40
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -17273,6 +17273,7 @@ MonoBehaviour:
   footSmoke: {fileID: 1204013816}
   shockwave: {fileID: 1521502845}
   getcoin: {fileID: 716285972}
+  heart: {fileID: 0}
 --- !u!114 &1663357690
 MonoBehaviour:
   m_ObjectHideFlags: 0
