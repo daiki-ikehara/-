@@ -262,7 +262,7 @@ public class floor : MonoBehaviour
             totalMoveBackTimeZ = 0f;
         }
 
-        Debug.Log(flag);
+       // Debug.Log(flag);
 
 
     }
