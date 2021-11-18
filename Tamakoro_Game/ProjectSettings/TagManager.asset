@@ -9,6 +9,7 @@ TagManager:
   - Floor
   - coin
   - Item
+  - item2
   layers:
   - Default
   - TransparentFX

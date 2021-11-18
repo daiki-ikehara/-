@@ -13,6 +13,9 @@ public class Effect : MonoBehaviour
     [SerializeField]
     private ParticleSystem getcoin;
 
+    [SerializeField]
+    private ParticleSystem heart;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -37,6 +40,14 @@ public class Effect : MonoBehaviour
         else
         {
             getcoin.Stop();
+        }
+        if (collision.gameObject.tag == "Item")
+        {
+            heart.Play();
+        }
+        else
+        {
+            heart.Stop();
         }
     }
             void Update()
