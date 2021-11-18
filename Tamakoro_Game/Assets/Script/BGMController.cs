@@ -6,12 +6,10 @@ public class BGMController : MonoBehaviour
 {
     AudioSource BGM;
     int xB = 0;
-    int count = 0;
     void Start()
     {
         BGM = GetComponent<AudioSource>();
         StartCoroutine("CountDown");
-        count = 0;
     }
 
     IEnumerator CountDown()
@@ -26,7 +24,7 @@ public class BGMController : MonoBehaviour
         {
             //BGMを止める
             BGM.Pause();
-            Debug.Log("STOP");
+            Debug.Log("Pause");
             xB++;
 
         }
@@ -35,13 +33,13 @@ public class BGMController : MonoBehaviour
         {
             //BGMを再開する
             BGM.UnPause();
-            Debug.Log("RESTART");
+            Debug.Log("UnPause");
             xB--;
         }
-        //クリアすると
-        if (count == 12)
-        {
-            BGM.Stop();
-        }
+    }
+    //BGMを止める関数
+    public void BGMStoper()
+    {
+        BGM.Stop();
     }
 }
