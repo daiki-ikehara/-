@@ -919,7 +919,8 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GameEnd
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9123731746316196281, guid: 1b2955e20986eab49ac5b0f3f36a545f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1b2955e20986eab49ac5b0f3f36a545f, type: 3}
 --- !u!1 &300435291
 GameObject:
@@ -1404,6 +1405,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 426118150}
   m_CullTransparentMesh: 0
+--- !u!1 &503313475 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9123731747277680260, guid: 1b2955e20986eab49ac5b0f3f36a545f,
+    type: 3}
+  m_PrefabInstance: {fileID: 248530404}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &503313480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503313475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c497e997bedc5544c89d008cbe42efab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pausePanel: {fileID: 745788895}
+  clear: {fileID: 1663357685}
+  start: {fileID: 963194231}
 --- !u!1 &534842981
 GameObject:
   m_ObjectHideFlags: 0
@@ -1680,6 +1702,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.1679075, y: 0.44791496, z: 2.0693667}
   m_Center: {x: 0.0014882088, y: -0.0025726787, z: -0.046597403}
+--- !u!1 &691321632 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9123731746316196283, guid: 1b2955e20986eab49ac5b0f3f36a545f,
+    type: 3}
+  m_PrefabInstance: {fileID: 248530404}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &691321634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691321632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b0516843d9f8b40a43640eb1289f3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  It: 0
+  i: 0
 --- !u!1 &696282265
 GameObject:
   m_ObjectHideFlags: 0
@@ -18787,7 +18829,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0170317, y: 1}
+    m_SensorSize: {x: 1.7941889, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
