@@ -43,11 +43,17 @@ public class Select2 : MonoBehaviour
 
         if (Input.GetKeyDown("joystick button 0") && It == 0 && Iz == 0)
         {
-            
+            //Stage1へ移動
+            SceneManager.LoadScene("SampleScene");
+            Time.timeScale = 1;
+
         }
         else if (Input.GetKeyDown("joystick button 0") && It == 0 && Iz == 1)
         {
-            
+            //Stage2へ移動
+            SceneManager.LoadScene("stage2");
+            //Time.timeScale = 1;
+
         }
         else if (Input.GetKeyDown("joystick button 0") && It == 1 && Iz == 0)
         {

@@ -17337,7 +17337,7 @@ MonoBehaviour:
   footSmoke: {fileID: 1204013816}
   shockwave: {fileID: 1521502845}
   getcoin: {fileID: 716285972}
-  heart: {fileID: 0}
+  heart: {fileID: 1204013816}
 --- !u!114 &1663357690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17827,7 +17827,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7941889, y: 1}
+    m_SensorSize: {x: 1.9878935, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
