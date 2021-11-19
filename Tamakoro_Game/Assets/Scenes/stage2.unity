@@ -20173,7 +20173,7 @@ MonoBehaviour:
   footSmoke: {fileID: 1204013816}
   shockwave: {fileID: 1521502845}
   getcoin: {fileID: 716285972}
-  heart: {fileID: 0}
+  heart: {fileID: 1521502845}
 --- !u!114 &1663357690
 MonoBehaviour:
   m_ObjectHideFlags: 0
