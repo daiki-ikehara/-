@@ -8,15 +8,13 @@ public class Effect : MonoBehaviour
     [SerializeField]
     private ParticleSystem footSmoke;
     private Rigidbody rb;
-    
     [SerializeField]
-    private ParticleSystem Light;
+    private ParticleSystem shockwave;
+    [SerializeField]
+    private ParticleSystem getcoin;
+
     [SerializeField]
     private ParticleSystem heart;
-    [SerializeField]
-    private ParticleSystem coin;
-    [SerializeField]
-    private ParticleSystem wallhit;
 
     void Start()
     {
@@ -27,31 +25,29 @@ public class Effect : MonoBehaviour
     {
         if (collision.gameObject.tag == "Wall") //Wallタグの付いたゲームオブジェクトと衝突したか判別
         {
-            
+            shockwave.Play();
             Debug.Log("再生");
            
         }
         else
         {
-           
+            shockwave.Stop();
         }
         if (collision.gameObject.tag == "coin")
         {
-            Debug.Log("エフェクト再生");
+            getcoin.Play();
         }
         else
         {
-            Debug.Log("エフェクト停止");
+            getcoin.Stop();
         }
         if (collision.gameObject.tag == "Item")
         {
             heart.Play();
-            Light.Play();
         }
         else
         {
             heart.Stop();
-            Light.Stop();
         }
     }
             void Update()
