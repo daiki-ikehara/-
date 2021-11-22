@@ -3,13 +3,13 @@
 public class coin : MonoBehaviour
 {
 	public static int count = 0;
-	void OnCollisionEnter(Collision collision)
+	void OnTriggerEnter(Collider other)
 	{
 		// Ballと衝突したら
-		if (collision.gameObject.tag == "Ball")
+		if (other.gameObject.CompareTag("Ball"))
 		{
 			// アイテムが消える
-			Destroy(gameObject);
+			gameObject.SetActive(false);
 			count = count + 1;
 			//Debug.Log(count);
 		}
