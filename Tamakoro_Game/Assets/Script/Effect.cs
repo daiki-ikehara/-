@@ -14,8 +14,6 @@ public class Effect : MonoBehaviour
     [SerializeField]
     private ParticleSystem heart;
     [SerializeField]
-    private ParticleSystem coin;
-    [SerializeField]
     private ParticleSystem wallhit;
 
     void Start()
@@ -23,36 +21,36 @@ public class Effect : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    void OnTrigger(Collider other)
+    void OnCollisionStay(Collision other)
     {
         if (other.gameObject.tag == "Wall") //Wallタグの付いたゲームオブジェクトと衝突したか判別
         {
-            
+            if (!wallhit.isEmitting)
+            {
+                wallhit.Play();
+            }
             Debug.Log("再生");
            
         }
         else
         {
-           
+            Debug.Log("停止");
+            if (!wallhit.isEmitting)
+            {
+                wallhit.Stop();
+            }
+        
         }
-        if (other.gameObject.tag == "coin")
-        {
-            Debug.Log("エフェクト再生");
-        }
-        else
-        {
-            Debug.Log("エフェクト停止");
-        }
-        if (other.gameObject.tag == "Item")
-        {
-            heart.Play();
-            Light.Play();
-        }
-        else
-        {
-            heart.Stop();
-            Light.Stop();
-        }
+        //if (other.gameObject.tag == "Item")
+        //{
+        //    heart.Play();
+        //    Light.Play();
+        //}
+        //else
+        //{
+        //    heart.Stop();
+        //    Light.Stop();
+        //}
     }
             void Update()
     {
