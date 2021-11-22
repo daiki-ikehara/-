@@ -12,13 +12,13 @@ public class CoinSound : MonoBehaviour
         //Componentを取得
         audioSource = GetComponent<AudioSource>();
     }
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision col)
     {
-        if (other.gameObject.tag == "coin")
+        if (col.gameObject.tag == "coin")
         {
             audioSource.PlayOneShot(Coinsound);
         }
-        if (other.gameObject.tag == "Item")
+        if (col.gameObject.tag == "Item")
         {
             audioSource.PlayOneShot(Heartsound);
         }
