@@ -2743,6 +2743,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 426118150}
   m_CullTransparentMesh: 0
+--- !u!198 &499654583 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 19800000, guid: f06e78284f831ae469c74624ab5d513b,
+    type: 3}
+  m_PrefabInstance: {fileID: 856951135}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &534842981
 GameObject:
   m_ObjectHideFlags: 0
@@ -15980,7 +15986,7 @@ MonoBehaviour:
   Light: {fileID: 0}
   heart: {fileID: 0}
   coin: {fileID: 0}
-  wallhit: {fileID: 0}
+  wallhit: {fileID: 499654583}
 --- !u!114 &1663357690
 MonoBehaviour:
   m_ObjectHideFlags: 0
