@@ -45,7 +45,12 @@ public class Select : MonoBehaviour
         }
         else if (Input.GetKeyDown("joystick button 0") && It == 2)
         {
+         #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
+#else
+          UnityEngine.Application.Quit();
+#endif
+
         }
         //else if (Input.GetKeyDown("joystick button 7") && It == 1)
         //{
