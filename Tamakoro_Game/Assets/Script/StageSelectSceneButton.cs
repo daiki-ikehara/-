@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class SampleSceneButton : MonoBehaviour
+
+public class StageSelectSceneButton : MonoBehaviour
+
 {
     private void Update()
     {
         if (Input.GetKeyDown("joystick button 0"))
         {
-            SceneManager.LoadScene("SampleScene");
-            Time.timeScale = 1;  //再開
+            SceneManager.LoadScene("StageSelect");
+            //Time.timeScale = 1;
         }
     }
 }
+
