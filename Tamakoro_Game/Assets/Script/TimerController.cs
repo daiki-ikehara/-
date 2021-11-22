@@ -27,12 +27,12 @@ public class TimerController : MonoBehaviour
             if (i == 0)
             {
                 countDownText.text = "スタート".ToString();
-                time = 1;
             }
             
         }
         yield return new WaitForSecondsRealtime(0.5f);//0.5秒待つ
         panel.SetActive(false);
         Time.timeScale = 1;
+        time = 1;
     }
 }

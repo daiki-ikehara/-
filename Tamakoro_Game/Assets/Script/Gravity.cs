@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class Gravity : MonoBehaviour
 {
-    private Transform myTransform;
-    private Vector3 pos;
-    private float gravity;
+    public Transform myTransform;
+    public Vector3 pos;
+    public float gravity;
     private float totalFallTime = 0f;
-    public float weight = 1.3f;
+    public float weight = 1.0f;
     GameObject floor;
-    GameObject ball;
     GameObject coin;
     collisiondetection col;
 
@@ -59,7 +58,9 @@ public class Gravity : MonoBehaviour
                 if (gravity <= 0) {
                     gravity *= -1;
                 }
+                pos.y = col.floorY + 0.04f + col.radius;
             }
+            myTransform.position = pos;
         }
         if (this.gameObject.tag == "Coin")
         {

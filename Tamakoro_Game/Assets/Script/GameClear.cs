@@ -11,12 +11,14 @@ public class GameClear : MonoBehaviour
     public static bool resultflg = false;
     public static bool retryflg = false;
 
+    public GameObject BGMStop;//変数宣言
 
     // Update is called once per frame
    public int count = 0;
     private void Start()
     {
         count = 0;
+        BGMStop = GameObject.Find("SoundManager");
     }
     void OnCollisionEnter(Collision collision)
     {
@@ -32,7 +34,8 @@ public class GameClear : MonoBehaviour
             Time.timeScale = 0;
             clearPanel.SetActive(true);
             paper.Play();
-
+            //コンポーネントを取得
+            BGMStop.GetComponent<BGMController>().BGMStoper();
         }
         else
         {
