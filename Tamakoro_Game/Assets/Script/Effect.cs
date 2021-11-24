@@ -21,9 +21,9 @@ public class Effect : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTrigger(Collider other)
     {
-        if (collision.gameObject.tag == "Wall") //Wallタグの付いたゲームオブジェクトと衝突したか判別
+        if (other.gameObject.tag == "Wall") //Wallタグの付いたゲームオブジェクトと衝突したか判別
         {
             shockwave.Play();
             Debug.Log("再生");
@@ -33,7 +33,7 @@ public class Effect : MonoBehaviour
         {
             shockwave.Stop();
         }
-        if (collision.gameObject.tag == "coin")
+        if (other.gameObject.tag == "coin")
         {
             getcoin.Play();
         }
@@ -41,7 +41,7 @@ public class Effect : MonoBehaviour
         {
             getcoin.Stop();
         }
-        if (collision.gameObject.tag == "Item")
+        if (other.gameObject.tag == "Item")
         {
             heart.Play();
         }

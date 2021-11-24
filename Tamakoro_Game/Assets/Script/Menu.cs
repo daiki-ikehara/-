@@ -20,7 +20,7 @@ public class Menu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (clear.count != 12 && start.time == 1)
+        if (coin.count != 12 && start.time == 1)
         {
             if (Input.GetKeyDown("joystick button 7") && xB == 0)
             {
