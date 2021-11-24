@@ -11,7 +11,7 @@ public class Select : MonoBehaviour
     public int i = 0;
 
     private AudioSource audio;
-    private AudioSource audio2;
+
 
     [SerializeField]
     public AudioClip sound;
@@ -21,7 +21,6 @@ public class Select : MonoBehaviour
     void Start()
     {
         audio = gameObject.AddComponent<AudioSource>();
-        audio2 = gameObject.AddComponent<AudioSource>();
     }
 
     //アップデート関数
@@ -44,18 +43,18 @@ public class Select : MonoBehaviour
 
         if (Input.GetKeyDown("joystick button 0") && It == 0)
         {
-            audio2.PlayOneShot(sound2);
+            audio.PlayOneShot(sound2);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             Time.timeScale = 1;  // 再開
         }
         else if (Input.GetKeyDown("joystick button 0") && It == 1)
         {
-            audio2.PlayOneShot(sound2);
+            audio.PlayOneShot(sound2);
             SceneManager.LoadScene("TitleScene");
         }
         else if (Input.GetKeyDown("joystick button 0") && It == 2)
         {
-            audio2.PlayOneShot(sound2);
+            audio.PlayOneShot(sound2);
 #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
 #else

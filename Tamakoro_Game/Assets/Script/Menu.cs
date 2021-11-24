@@ -14,7 +14,8 @@ public class Menu : MonoBehaviour
     private AudioSource audio;
 
     [SerializeField]
-    private AudioClip sound;
+    public AudioClip sound;
+    public AudioClip sound2;
 
     // Start is called before the first frame update
     void Start()
@@ -42,7 +43,7 @@ public class Menu : MonoBehaviour
             {
                 Time.timeScale = 1;  // 再開
                 pausePanel.SetActive(false);
-                audio.PlayOneShot(sound);
+                audio.PlayOneShot(sound2);
 
                 xB--;
 
