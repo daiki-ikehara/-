@@ -11,10 +11,16 @@ public class Menu : MonoBehaviour
     public GameClear clear;
     public TimerController start;
 
+    private AudioSource audio;
+
+    [SerializeField]
+    private AudioClip sound;
+
     // Start is called before the first frame update
     void Start()
     {
         pausePanel.SetActive(false);
+        audio = gameObject.AddComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -26,6 +32,7 @@ public class Menu : MonoBehaviour
             {
                 Time.timeScale = 0;  // 時間停止
                 pausePanel.SetActive(true);
+                audio.PlayOneShot(sound);
 
                 xB++;
 
@@ -35,6 +42,7 @@ public class Menu : MonoBehaviour
             {
                 Time.timeScale = 1;  // 再開
                 pausePanel.SetActive(false);
+                audio.PlayOneShot(sound);
 
                 xB--;
 

@@ -10,10 +10,18 @@ public class Select : MonoBehaviour
     public int It = 0;
     public int i = 0;
 
+    private AudioSource audio;
+    private AudioSource audio2;
+
+    [SerializeField]
+    public AudioClip sound;
+    public AudioClip sound2;
+
     //スタート関数
     void Start()
     {
-
+        audio = gameObject.AddComponent<AudioSource>();
+        audio2 = gameObject.AddComponent<AudioSource>();
     }
 
     //アップデート関数
@@ -36,16 +44,19 @@ public class Select : MonoBehaviour
 
         if (Input.GetKeyDown("joystick button 0") && It == 0)
         {
+            audio2.PlayOneShot(sound2);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             Time.timeScale = 1;  // 再開
         }
         else if (Input.GetKeyDown("joystick button 0") && It == 1)
         {
+            audio2.PlayOneShot(sound2);
             SceneManager.LoadScene("TitleScene");
         }
         else if (Input.GetKeyDown("joystick button 0") && It == 2)
         {
-         #if UNITY_EDITOR
+            audio2.PlayOneShot(sound2);
+#if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
 #else
           UnityEngine.Application.Quit();
@@ -62,6 +73,7 @@ public class Select : MonoBehaviour
         //}
     }
 
+
     public void Puro()
     {
         float y = Input.GetAxisRaw("Vertical");
@@ -70,22 +82,26 @@ public class Select : MonoBehaviour
         {
             transform.position += new Vector3(0, -45, 0);//毎フレームx座標を0.1ずつプラス        
             It++;
+            audio.PlayOneShot(sound);
         }
         else if (y == -1)
         {
             transform.position += new Vector3(0, 90, 0);
             It = 0;
+            audio.PlayOneShot(sound);
         }
 
         if (y == +1 && It != 0)
         {
             transform.position += new Vector3(0, 45, 0);//毎フレームx座標を0.1ずつプラス     
             It--;
+            audio.PlayOneShot(sound);
         }
         else if (y == +1)
         {
             transform.position += new Vector3(0, -90, 0);
             It = 2;
+            audio.PlayOneShot(sound);
         }
     }
 }
