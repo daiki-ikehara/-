@@ -16,6 +16,6 @@ public class result_coin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(ItemCount.count);
+        
     }
 }

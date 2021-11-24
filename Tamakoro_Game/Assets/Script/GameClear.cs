@@ -17,18 +17,15 @@ public class GameClear : MonoBehaviour
    public int count = 0;
     private void Start()
     {
-        count = 0;
+        coin.count = 0;
         BGMStop = GameObject.Find("SoundManager");
+        resultflg = false;
     }
     void OnCollisionEnter(Collision collision)
     {
         //        string yourTag = collision.gameObject.tag;
-        if (collision.gameObject.tag == "coin")
-        {
-            count += 1;
-        }
-
-        if (count == 12)
+        
+        if (coin.count == 12)
         {
 
             Time.timeScale = 0;
@@ -65,13 +62,13 @@ public class GameClear : MonoBehaviour
 
     IEnumerator panelfalse()
     {
-        if (count == 12)
+        if (coin.count == 12)
         {
             yield return new WaitForSecondsRealtime(1);
         }
         clearPanel.SetActive(false);
 
-        if (count == 12 && !clearPanel.activeSelf)
+        if (coin.count == 12 && !clearPanel.activeSelf)
         {
             resultPanel.SetActive(true);
             resultflg = true;

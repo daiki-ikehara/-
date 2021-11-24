@@ -10,6 +10,7 @@ public class ReStartButton : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 1;  // 再開
+        coin.count = 0;
 
         f = true;
     }
