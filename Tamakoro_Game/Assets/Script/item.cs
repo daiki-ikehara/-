@@ -18,7 +18,7 @@ public class item : MonoBehaviour
     {
         if (speed == 0)
         {
-            Debug.Log("ぜろ");
+            //Debug.Log("ぜろ");
         }
         else
         {

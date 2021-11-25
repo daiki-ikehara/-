@@ -21,7 +21,7 @@ public class GameClear : MonoBehaviour
         BGMStop = GameObject.Find("SoundManager");
         resultflg = false;
     }
-    void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
         //        string yourTag = collision.gameObject.tag;
         

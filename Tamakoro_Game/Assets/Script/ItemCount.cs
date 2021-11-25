@@ -17,7 +17,7 @@ public class ItemCount : MonoBehaviour
     }
 
     //cube同士での衝突+1
-    void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
         //        string yourTag = collision.gameObject.tag;
 

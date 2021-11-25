@@ -36,7 +36,7 @@ public class Effect : MonoBehaviour
         }
         else
         {
-            Debug.Log("停止");
+            //Debug.Log("停止");
             if (!wallhit.isEmitting)
             {
                 wallhit.Stop();

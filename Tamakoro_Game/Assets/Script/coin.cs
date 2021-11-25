@@ -10,6 +10,7 @@ public class coin : MonoBehaviour
         {
             gameObject.SetActive(false);
             count = count + 1;
+            Debug.Log(count);
         }
     }
 }
