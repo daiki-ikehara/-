@@ -25,9 +25,9 @@ public class item : MonoBehaviour
             Debug.Log("加速中");
         }
     }
-    void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Item")
+        if (other.gameObject.tag == "Item")
         {
             // アイテムが消える
             Destroy(Heart);

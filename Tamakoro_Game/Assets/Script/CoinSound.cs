@@ -12,7 +12,7 @@ public class CoinSound : MonoBehaviour
         //Componentを取得
         audioSource = GetComponent<AudioSource>();
     }
-    void OnCollisionEnter(Collision col)
+    private void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.tag == "coin")
         {
