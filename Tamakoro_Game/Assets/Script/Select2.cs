@@ -14,7 +14,8 @@ public class Select2 : MonoBehaviour
     private AudioSource audio;
 
     [SerializeField]
-    private AudioClip sound;
+    public AudioClip sound;
+    public AudioClip sound2;
 
     //スタート関数
     void Start()
@@ -47,6 +48,8 @@ public class Select2 : MonoBehaviour
             SceneManager.LoadScene("SampleScene");
             Time.timeScale = 1;
 
+            audio.PlayOneShot(sound2);
+
         }
         else if (Input.GetKeyDown("joystick button 0") && It == 0 && Iz == 1)
         {
@@ -54,14 +57,18 @@ public class Select2 : MonoBehaviour
             SceneManager.LoadScene("stage2");
             //Time.timeScale = 1;
 
+            audio.PlayOneShot(sound2);
+
         }
         else if (Input.GetKeyDown("joystick button 0") && It == 1 && Iz == 0)
         {
-           
+            //Stage3へ移動
+            SceneManager.LoadScene("stage3");
+            audio.PlayOneShot(sound2);
         }
         else if (Input.GetKeyDown("joystick button 0") && It == 1 && Iz == 1)
         {
-
+            audio.PlayOneShot(sound2);
         }
         //else if (Input.GetKeyDown("joystick button 7") && It == 1)
         //{
