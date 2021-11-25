@@ -27,10 +27,10 @@ public class result_s : MonoBehaviour
         countTime += Time.deltaTime;
        ;
 
-        if (ItemCount.count == 12)
+        if (coin.count == 12)
         {
             
-            scoreText.text = string.Format("所得したコイン　{0}/12枚",ItemCount.count);
+            scoreText.text = string.Format("所得したコイン　{0}/12枚",coin.count);
             Time_text.text = string.Format("かかった時間　{0:00}:{1:00}", minutes, seconds);
         }
         

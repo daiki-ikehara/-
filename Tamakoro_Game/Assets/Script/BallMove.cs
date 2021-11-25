@@ -22,22 +22,22 @@ public class BallMove : MonoBehaviour
 
         if (col.RotateX > 0)
         {
-            col.floorY = col.RotateX / -61f;
+            col.floorY = col.RotateX / -55f;
             col.floorY = col.floorY * (gravity.pos.z);
         }
         if (col.RotateX < 0)
         {
-            col.floorY = col.RotateX / -61f;
+            col.floorY = col.RotateX / -55f;
             col.floorY = col.floorY * (gravity.pos.z);
         }
         if(col.RotateZ > 0)
         {
-            col.floorY = col.RotateZ / 61f;
+            col.floorY = col.RotateZ / 55f;
             col.floorY = col.floorY * (gravity.pos.x);
         }
         if (col.RotateZ < 0)
         {
-            col.floorY = col.RotateZ / 61f;
+            col.floorY = col.RotateZ / 55f;
             col.floorY = col.floorY * (gravity.pos.x);
         }
 

@@ -15,6 +15,8 @@ public class Effect : MonoBehaviour
     private ParticleSystem heart;
     [SerializeField]
     private ParticleSystem wallhit;
+    [SerializeField]
+    private ParticleSystem coinefect;
 
     void Start()
     {
@@ -41,18 +43,37 @@ public class Effect : MonoBehaviour
             }
         
         }
-        //if (other.gameObject.tag == "Item")
-        //{
-        //    heart.Play();
-        //    Light.Play();
-        //}
-        //else
-        //{
-        //    heart.Stop();
-        //    Light.Stop();
-        //}
+        
     }
-            void Update()
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Item")
+        {
+            Debug.Log("アイテム再生中");
+            heart.Play();
+            Light.Play();
+        }
+        else
+        {
+            heart.Stop();
+            Light.Stop();
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("coin"))
+        {
+            coinefect.Play();
+        }
+        else
+        {
+            coinefect.Stop();
+        }
+    }
+
+    void Update()
     {
         // 速度が0.1以上なら
         if (rb.velocity.magnitude > 0.1f)
