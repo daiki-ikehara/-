@@ -1245,12 +1245,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fa1933fd955f6642838747160cbdf05, type: 3}
---- !u!198 &614097435 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 869221216546889876, guid: 7e90daf611a7904459f3a726500fec5c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1104774551}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -12641,6 +12635,7 @@ MonoBehaviour:
   paper: {fileID: 999296926}
   resultPanel: {fileID: 1372109281}
   BGMStop: {fileID: 0}
+  count: 0
 --- !u!114 &1663357686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12687,7 +12682,6 @@ MonoBehaviour:
   footSmoke: {fileID: 1204013816}
   Light: {fileID: 0}
   heart: {fileID: 1204013816}
-  coinef: {fileID: 614097435}
   wallhit: {fileID: 1167214490}
 --- !u!114 &1663357690
 MonoBehaviour:
