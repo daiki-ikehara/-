@@ -1190,15 +1190,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4124257825387716, guid: f87e7926fd589094b8a269e14b8bea5e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.792
       objectReference: {fileID: 0}
     - target: {fileID: 4124257825387716, guid: f87e7926fd589094b8a269e14b8bea5e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.52
       objectReference: {fileID: 0}
     - target: {fileID: 4124257825387716, guid: f87e7926fd589094b8a269e14b8bea5e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1.03
       objectReference: {fileID: 0}
     - target: {fileID: 4124257825387716, guid: f87e7926fd589094b8a269e14b8bea5e, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1907,7 +1907,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: 0.0020008814, y: 1.274454, z: -0.58112}
+  m_LocalPosition: {x: 0.0020008963, y: 1.274454, z: -0.58112}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12926,6 +12926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 020c202f4ea1a8741a6981f8b42366c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorA: {fileID: 2100000, guid: 6e4ed219f89a684428ab9ae4070696cc, type: 2}
   Heart: {fileID: 364706606}
 --- !u!1 &1721890887
 GameObject:
@@ -13272,7 +13273,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2243242, y: 1}
+    m_SensorSize: {x: 2.2123656, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -13289,7 +13290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1838847377}
   m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: 0.0020008814, y: 1.274454, z: -0.58112}
+  m_LocalPosition: {x: 0.0020008963, y: 1.274454, z: -0.58112}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1542873686}

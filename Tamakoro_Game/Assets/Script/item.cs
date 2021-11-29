@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class item : MonoBehaviour
 {
+    public Material colorA;
     private Vector3 _prevPosition;
     float speed = 0;
     public GameObject Heart;
+    bool flg = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,10 +31,10 @@ public class item : MonoBehaviour
     {
         if (other.gameObject.tag == "Item")
         {
+            GetComponent<Renderer>().material.color = new Color32(255, 117, 91, 1);
             // アイテムが消える
             Destroy(Heart);
-            if (Mathf.Approximately(Time.deltaTime, 0))
-                return;
+
             speed = 10;
             // 現在位置取得
             var position = transform.position;
@@ -45,8 +47,10 @@ public class item : MonoBehaviour
 
             // 前フレーム位置を更新
             _prevPosition = position;
+            StartCoroutine("speedstop");
         }
-        StartCoroutine("speedstop");
+         //StartCoroutine("speedstop");
+        
 
     }
 
@@ -55,7 +59,9 @@ public class item : MonoBehaviour
         for (int i = 0; i < 450; i++)
         {
             yield return null;
+          
         }
         speed = 0;
+        GetComponent<Renderer>().material.color = colorA.color;
     }
 }
