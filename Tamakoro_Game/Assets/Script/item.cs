@@ -8,6 +8,7 @@ public class item : MonoBehaviour
     private Vector3 _prevPosition;
     float speed = 0;
     public GameObject Heart;
+    bool flg = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,8 +47,10 @@ public class item : MonoBehaviour
 
             // 前フレーム位置を更新
             _prevPosition = position;
+            StartCoroutine("speedstop");
         }
-        StartCoroutine("speedstop");
+         //StartCoroutine("speedstop");
+        
 
     }
 
@@ -56,6 +59,7 @@ public class item : MonoBehaviour
         for (int i = 0; i < 450; i++)
         {
             yield return null;
+          
         }
         speed = 0;
         GetComponent<Renderer>().material.color = colorA.color;
