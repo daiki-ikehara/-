@@ -30,7 +30,7 @@ public class item : MonoBehaviour
     {
         if (other.gameObject.tag == "Item")
         {
-            GetComponent<Renderer>().material.color = Color.red;
+            GetComponent<Renderer>().material.color = new Color32(255, 117, 91, 1);
             // アイテムが消える
             Destroy(Heart);
             if (Mathf.Approximately(Time.deltaTime, 0))
