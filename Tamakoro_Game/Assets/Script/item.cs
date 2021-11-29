@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class item : MonoBehaviour
 {
+    public Material colorA;
     private Vector3 _prevPosition;
     float speed = 0;
     public GameObject Heart;
@@ -29,6 +30,7 @@ public class item : MonoBehaviour
     {
         if (other.gameObject.tag == "Item")
         {
+            GetComponent<Renderer>().material.color = Color.red;
             // アイテムが消える
             Destroy(Heart);
             if (Mathf.Approximately(Time.deltaTime, 0))
@@ -57,5 +59,6 @@ public class item : MonoBehaviour
             yield return null;
         }
         speed = 0;
+        GetComponent<Renderer>().material.color = colorA.color;
     }
 }

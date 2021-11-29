@@ -15667,6 +15667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 020c202f4ea1a8741a6981f8b42366c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorA: {fileID: 2100000, guid: 6e4ed219f89a684428ab9ae4070696cc, type: 2}
   Heart: {fileID: 110068026}
 --- !u!1 &1721890887
 GameObject:
