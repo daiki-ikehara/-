@@ -46,20 +46,7 @@ public class Effect : MonoBehaviour
         
     }
 
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Item")
-        {
-            Debug.Log("アイテム再生中");
-            heart.Play();
-            Light.Play();
-        }
-        else
-        {
-            heart.Stop();
-            Light.Stop();
-        }
-    }
+    
 
     private void OnTriggerEnter(Collider other)
     {
@@ -70,6 +57,17 @@ public class Effect : MonoBehaviour
         else
         {
             coinefect.Stop();
+        }
+        if (other.gameObject.tag == "Item")
+        {
+            Debug.Log("アイテム再生中");
+            heart.Play();
+            Light.Play();
+        }
+        else
+        {
+            heart.Stop();
+            Light.Stop();
         }
     }
 

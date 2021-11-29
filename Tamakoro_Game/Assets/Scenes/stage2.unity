@@ -8343,7 +8343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4032091950274674, guid: f87e7926fd589094b8a269e14b8bea5e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.686
+      value: 0.587
       objectReference: {fileID: 0}
     - target: {fileID: 4032091950274674, guid: f87e7926fd589094b8a269e14b8bea5e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8351,15 +8351,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4032091950274674, guid: f87e7926fd589094b8a269e14b8bea5e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.015
+      value: 0.195
       objectReference: {fileID: 0}
     - target: {fileID: 4124257825387716, guid: f87e7926fd589094b8a269e14b8bea5e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.035
       objectReference: {fileID: 0}
     - target: {fileID: 4124257825387716, guid: f87e7926fd589094b8a269e14b8bea5e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.023
       objectReference: {fileID: 0}
     - target: {fileID: 4124257825387716, guid: f87e7926fd589094b8a269e14b8bea5e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8411,7 +8411,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4608248244129964, guid: f87e7926fd589094b8a269e14b8bea5e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.073
+      value: 0.927
       objectReference: {fileID: 0}
     - target: {fileID: 4608248244129964, guid: f87e7926fd589094b8a269e14b8bea5e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8419,7 +8419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4608248244129964, guid: f87e7926fd589094b8a269e14b8bea5e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.262
+      value: 0.103
       objectReference: {fileID: 0}
     - target: {fileID: 198010482706295650, guid: f87e7926fd589094b8a269e14b8bea5e,
         type: 3}
@@ -8434,6 +8434,11 @@ PrefabInstance:
     - target: {fileID: 198131351025519998, guid: f87e7926fd589094b8a269e14b8bea5e,
         type: 3}
       propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198131351025519998, guid: f87e7926fd589094b8a269e14b8bea5e,
+        type: 3}
+      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -15894,7 +15899,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1838847378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15924,7 +15929,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2243242, y: 1}
+    m_SensorSize: {x: 2.2123656, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
