@@ -33,8 +33,7 @@ public class item : MonoBehaviour
             GetComponent<Renderer>().material.color = new Color32(255, 117, 91, 1);
             // アイテムが消える
             Destroy(Heart);
-            if (Mathf.Approximately(Time.deltaTime, 0))
-                return;
+
             speed = 10;
             // 現在位置取得
             var position = transform.position;
