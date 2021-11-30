@@ -934,10 +934,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2074881719}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38b063a5505d6d94fb2b8c9e670eecf8, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ce8a10648ec8da44a461b8cb58ecbb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   It: 0
   Iz: 0
   i: 0
-  sound: {fileID: 8300000, guid: d17c1d5d980b3cc4da6d8e3ec89b5480, type: 3}
+  sound: {fileID: 0}
+  sound2: {fileID: 0}

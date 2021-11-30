@@ -68,6 +68,8 @@ public class Select2 : MonoBehaviour
         }
         else if (Input.GetKeyDown("joystick button 0") && It == 1 && Iz == 1)
         {
+            //Stage4へ移動
+            SceneManager.LoadScene("stage4");
             audio.PlayOneShot(sound2);
         }
         //else if (Input.GetKeyDown("joystick button 7") && It == 1)
