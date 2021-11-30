@@ -940,5 +940,5 @@ MonoBehaviour:
   It: 0
   Iz: 0
   i: 0
-  sound: {fileID: 0}
-  sound2: {fileID: 0}
+  sound: {fileID: 8300000, guid: 608641551887a46488c105a78f0d8eec, type: 3}
+  sound2: {fileID: 8300000, guid: c1bdcee667e620a4ea2fcaff71b7c5fb, type: 3}
