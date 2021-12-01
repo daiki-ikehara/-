@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4465785, g: 0.49641275, b: 0.5748151, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657892, g: 0.49641353, b: 0.5748163, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2668,12 +2668,12 @@ PrefabInstance:
         type: 3}
       propertyPath: sound
       value: 
-      objectReference: {fileID: 8300000, guid: dc85d345ac4aa74469ab4c2d793c9a29, type: 3}
+      objectReference: {fileID: 8300000, guid: 26def23a0ac468b4691ec0fe8ffdf311, type: 3}
     - target: {fileID: 8630634505892649047, guid: a5b3c9136bc6d2d49bd102eaed05b67c,
         type: 3}
       propertyPath: sound2
       value: 
-      objectReference: {fileID: 8300000, guid: b464a799e3140fd4ea1f196414007ab2, type: 3}
+      objectReference: {fileID: 8300000, guid: c1bdcee667e620a4ea2fcaff71b7c5fb, type: 3}
     - target: {fileID: 8630634506031317882, guid: a5b3c9136bc6d2d49bd102eaed05b67c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3266,7 +3266,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.3420201, y: 0, z: 0, w: 0.9396927}
-  m_LocalPosition: {x: 0.015999822, y: 1.709575, z: -1.459089}
+  m_LocalPosition: {x: 0.015999852, y: 1.709575, z: -1.459089}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -15669,6 +15669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorA: {fileID: 2100000, guid: 6e4ed219f89a684428ab9ae4070696cc, type: 2}
   Heart: {fileID: 110068026}
+  rb: {fileID: 0}
 --- !u!1 &1721890887
 GameObject:
   m_ObjectHideFlags: 0
@@ -15930,7 +15931,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.5266905, y: 1}
+    m_SensorSize: {x: 1.786925, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -15947,7 +15948,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1838847377}
   m_LocalRotation: {x: 0.3420201, y: 0, z: 0, w: 0.9396927}
-  m_LocalPosition: {x: 0.015999822, y: 1.709575, z: -1.459089}
+  m_LocalPosition: {x: 0.015999852, y: 1.709575, z: -1.459089}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1542873686}
