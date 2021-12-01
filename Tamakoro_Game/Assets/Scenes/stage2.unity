@@ -3351,7 +3351,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.3420201, y: 0, z: 0, w: 0.9396927}
-  m_LocalPosition: {x: 0.015999852, y: 1.709575, z: -1.459089}
+  m_LocalPosition: {x: 0.015999882, y: 1.709575, z: -1.459089}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -15548,6 +15548,7 @@ MonoBehaviour:
   paper: {fileID: 999296926}
   resultPanel: {fileID: 1372109281}
   BGMStop: {fileID: 0}
+  sound: {fileID: 8300000, guid: 4de52987ba258104c8b1e6d10a4c2cf1, type: 3}
   count: 0
 --- !u!114 &1663357686
 MonoBehaviour:
@@ -16016,7 +16017,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.786925, y: 1}
+    m_SensorSize: {x: 1.716707, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -16033,7 +16034,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1838847377}
   m_LocalRotation: {x: 0.3420201, y: 0, z: 0, w: 0.9396927}
-  m_LocalPosition: {x: 0.015999852, y: 1.709575, z: -1.459089}
+  m_LocalPosition: {x: 0.015999882, y: 1.709575, z: -1.459089}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1542873686}

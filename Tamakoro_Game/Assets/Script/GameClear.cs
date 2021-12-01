@@ -13,13 +13,21 @@ public class GameClear : MonoBehaviour
 
     public GameObject BGMStop;//変数宣言
 
+
+
+    private AudioSource audio;
+
+    [SerializeField]
+    public AudioClip sound;
+
     // Update is called once per frame
-   public int count = 0;
+    public int count = 0;
     private void Start()
     {
         coin.count = 0;
         BGMStop = GameObject.Find("SoundManager");
         resultflg = false;
+        audio = gameObject.AddComponent<AudioSource>();
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -49,10 +57,11 @@ public class GameClear : MonoBehaviour
         {
             if (Input.GetKeyDown("joystick button 1") || Input.GetKeyDown("joystick button 2"))
             {
+                audio.PlayOneShot(sound);
                 Debug.Log("ok");
                 resultPanel.SetActive(false);
                 retryflg = true;
-
+                resultflg = false;
             }
         }
 
