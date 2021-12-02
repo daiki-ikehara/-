@@ -20,10 +20,15 @@ public class StageSelectSceneButton : MonoBehaviour
     {
         if (Input.GetKeyDown("joystick button 0"))
         {
-            Titleaudio.PlayOneShot(Titlesound);
-            SceneManager.LoadScene("StageSelect");
-            //Time.timeScale = 1;
+            StartCoroutine("TitleSE");
         }
+    }
+
+    IEnumerator TitleSE()
+    {
+        Titleaudio.PlayOneShot(Titlesound);
+        yield return new WaitForSecondsRealtime(0.8f);
+        SceneManager.LoadScene("StageSelect");
     }
 }
 

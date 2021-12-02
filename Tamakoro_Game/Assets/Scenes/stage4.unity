@@ -741,6 +741,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b2955e20986eab49ac5b0f3f36a545f, type: 3}
+--- !u!114 &248530405 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2436566784881103831, guid: 1b2955e20986eab49ac5b0f3f36a545f,
+    type: 3}
+  m_PrefabInstance: {fileID: 248530404}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b0516843d9f8b40a43640eb1289f3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &300435291
 GameObject:
   m_ObjectHideFlags: 0
@@ -3411,7 +3423,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.46174863, y: 0, z: 0, w: 0.8870109}
-  m_LocalPosition: {x: 0.015999852, y: 1.709575, z: -1.074153}
+  m_LocalPosition: {x: 0.015999882, y: 1.709575, z: -1.074153}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -15254,6 +15266,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffe76cad9e2c3dd48a61f09afc3d0c49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  start: {fileID: 963194231}
+  ST: {fileID: 248530405}
 --- !u!4 &1721890891
 Transform:
   m_ObjectHideFlags: 0
@@ -15479,7 +15493,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2064342, y: 1}
+    m_SensorSize: {x: 1.7118644, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -15496,7 +15510,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1838847377}
   m_LocalRotation: {x: 0.46174863, y: 0, z: 0, w: 0.8870109}
-  m_LocalPosition: {x: 0.015999852, y: 1.709575, z: -1.074153}
+  m_LocalPosition: {x: 0.015999882, y: 1.709575, z: -1.074153}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1542873686}
@@ -31551,6 +31565,11 @@ PrefabInstance:
       propertyPath: sound2
       value: 
       objectReference: {fileID: 8300000, guid: 5b71d614a2f642945ac9d1fa70458f10, type: 3}
+    - target: {fileID: 7583496140240018272, guid: 7d75ae533f9c77845b38a2d66c8819cf,
+        type: 3}
+      propertyPath: ST
+      value: 
+      objectReference: {fileID: 248530405}
     - target: {fileID: 7583496140240018273, guid: 7d75ae533f9c77845b38a2d66c8819cf,
         type: 3}
       propertyPath: m_LocalPosition.x

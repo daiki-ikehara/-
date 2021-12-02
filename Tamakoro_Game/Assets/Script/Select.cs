@@ -9,6 +9,7 @@ public class Select : MonoBehaviour
 {
     public int It = 0;
     public int i = 0;
+    public int Stop = 0;
 
     private AudioSource audio;
 
@@ -42,25 +43,17 @@ public class Select : MonoBehaviour
 
         if (Input.GetKeyDown("joystick button 0") && It == 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            Time.timeScale = 1;  // 再開
+            StartCoroutine("Restart");
+            //Time.timeScale = 1;  // 再開
             coin.count = 0;
-            audio.PlayOneShot(sound2);
         }
         else if (Input.GetKeyDown("joystick button 0") && It == 1)
         {
-            SceneManager.LoadScene("TitleScene");
-            audio.PlayOneShot(sound2);
+            StartCoroutine("Title");
         }
         else if (Input.GetKeyDown("joystick button 0") && It == 2)
         {
-            audio.PlayOneShot(sound2);
-#if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
-#else
-          UnityEngine.Application.Quit();
-#endif
-
+            StartCoroutine("End");
         }
         //else if (Input.GetKeyDown("joystick button 7") && It == 1)
         //{
@@ -102,4 +95,32 @@ public class Select : MonoBehaviour
             audio.PlayOneShot(sound);
         }
     }
+
+    IEnumerator Restart()
+    {
+        Stop = 1;
+        audio.PlayOneShot(sound2);
+        yield return new WaitForSecondsRealtime(0.3f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    IEnumerator Title()
+    {
+        Stop = 1;
+        audio.PlayOneShot(sound2);
+        yield return new WaitForSecondsRealtime(0.3f);
+        SceneManager.LoadScene("TitleScene");
+    }
+    IEnumerator End()
+    {
+        Stop = 1;
+        audio.PlayOneShot(sound2);
+        yield return new WaitForSecondsRealtime(0.3f);
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+          UnityEngine.Application.Quit();
+#endif
+    }
+
 }

@@ -6,6 +6,9 @@ public class BGMController : MonoBehaviour
 {
     AudioSource BGM;
     int xB = 0;
+    public TimerController start;
+    public Select ST;  //Stop = 0
+
     void Start()
     {
         BGM = GetComponent<AudioSource>();
@@ -19,22 +22,25 @@ public class BGMController : MonoBehaviour
     }
     void Update()
     {
-        //STARTを押すと
-        if (Input.GetKeyDown("joystick button 7") && xB == 0)
+        if (start.time == 1)
         {
-            //BGMを止める
-            BGM.Pause();
-            Debug.Log("Pause");
-            xB++;
+            //STARTを押すと
+            if (Input.GetKeyDown("joystick button 7") && xB == 0)
+            {
+                //BGMを止める
+                BGM.Pause();
+                Debug.Log("Pause");
+                xB++;
 
-        }
-        //再度STARTを押すと
-        else if (Input.GetKeyDown("joystick button 7") && xB == 1)
-        {
-            //BGMを再開する
-            BGM.UnPause();
-            Debug.Log("UnPause");
-            xB--;
+            }
+            //再度STARTを押すと
+            else if (Input.GetKeyDown("joystick button 7") && xB == 1 && ST.Stop == 0)
+            {
+                //BGMを再開する
+                BGM.UnPause();
+                Debug.Log("UnPause");
+                xB--;
+            }
         }
     }
     //BGMを止める関数
