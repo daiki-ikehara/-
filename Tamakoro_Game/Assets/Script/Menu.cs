@@ -10,6 +10,7 @@ public class Menu : MonoBehaviour
     int bcount;
     public GameClear clear;
     public TimerController start;
+    public Select ST;  //Stop = 0
 
     private AudioSource audio;
 
@@ -38,7 +39,7 @@ public class Menu : MonoBehaviour
 
                 Debug.Log("button7");
             }
-            else if (Input.GetKeyDown("joystick button 7") && xB == 1)
+            else if (Input.GetKeyDown("joystick button 7") && xB == 1 && ST.Stop == 0)
             {
                 Time.timeScale = 1;  // 再開
                 pausePanel.SetActive(false);
