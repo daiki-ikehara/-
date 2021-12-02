@@ -27,7 +27,7 @@ public class StageSelectSceneButton : MonoBehaviour
     IEnumerator TitleSE()
     {
         Titleaudio.PlayOneShot(Titlesound);
-        yield return new WaitForSecondsRealtime(0.8f);
+        yield return new WaitForSecondsRealtime(1f);
         SceneManager.LoadScene("StageSelect");
     }
 }
