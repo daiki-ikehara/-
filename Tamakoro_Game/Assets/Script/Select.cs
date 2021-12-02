@@ -44,6 +44,7 @@ public class Select : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             Time.timeScale = 1;  // 再開
+            coin.count = 0;
             audio.PlayOneShot(sound2);
         }
         else if (Input.GetKeyDown("joystick button 0") && It == 1)
