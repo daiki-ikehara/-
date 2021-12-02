@@ -47,7 +47,7 @@ public class Select2 : MonoBehaviour
             //Stage1へ移動
             SceneManager.LoadScene("SampleScene");
             Time.timeScale = 1;
-
+            coin.count = 0;
             audio.PlayOneShot(sound2);
 
         }
@@ -55,6 +55,7 @@ public class Select2 : MonoBehaviour
         {
             //Stage2へ移動
             SceneManager.LoadScene("stage2");
+            coin.count = 0;
             //Time.timeScale = 1;
 
             audio.PlayOneShot(sound2);
@@ -64,12 +65,14 @@ public class Select2 : MonoBehaviour
         {
             //Stage3へ移動
             SceneManager.LoadScene("stage3");
+            coin.count = 0;
             audio.PlayOneShot(sound2);
         }
         else if (Input.GetKeyDown("joystick button 0") && It == 1 && Iz == 1)
         {
             //Stage4へ移動
-            SceneManager.LoadScene("stage4");
+            SceneManager.LoadScene("stage4");]
+            coin.count = 0;
             audio.PlayOneShot(sound2);
         }
         //else if (Input.GetKeyDown("joystick button 7") && It == 1)
