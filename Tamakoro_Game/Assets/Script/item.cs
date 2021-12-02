@@ -59,11 +59,7 @@ public class item : MonoBehaviour
 
     IEnumerator speedstop()
     {
-        for (int i = 0; i < 350; i++)
-        {
-            yield return null;
-          
-        }
+        yield return new WaitForSeconds(6);
         speed = 0;
         GetComponent<Renderer>().material.color = colorA.color;
     }
