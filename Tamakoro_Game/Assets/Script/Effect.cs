@@ -17,9 +17,12 @@ public class Effect : MonoBehaviour
     private ParticleSystem wallhit;
     [SerializeField]
     private ParticleSystem coinefect;
+    [SerializeField] private GameObject pausePanel;
+
 
     void Start()
     {
+      
         rb = GetComponent<Rigidbody>();
     }
 
@@ -76,7 +79,7 @@ public class Effect : MonoBehaviour
         // 速度が0.1以上なら
         if (rb.velocity.magnitude > 0.1f)
         {
-            
+
             // 再生
             if (!footSmoke.isEmitting)
             {
@@ -90,9 +93,17 @@ public class Effect : MonoBehaviour
             // 停止
             if (footSmoke.isEmitting)
             {
-                footSmoke.Pause();
+                Debug.Log("sound停止");
                 GetComponent<AudioSource>().Stop();
+                footSmoke.Pause();
+
             }
         }
+
+        if (Input.GetKeyDown("joystick button 7"))
+        {
+            GetComponent<AudioSource>().Stop();
+        }
+
     }
 }

@@ -14668,6 +14668,7 @@ MonoBehaviour:
   heart: {fileID: 2041540132}
   wallhit: {fileID: 28212328}
   coinefect: {fileID: 913286}
+  pausePanel: {fileID: 534842981}
 --- !u!114 &1663357690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15415,7 +15416,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2064342, y: 1}
+    m_SensorSize: {x: 2.218329, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
