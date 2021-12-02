@@ -6,6 +6,7 @@ public class CoinSound : MonoBehaviour
 {
     public AudioClip Coinsound;
     public AudioClip Heartsound;
+    
     AudioSource audioSource;
     void Start()
     {
@@ -22,6 +23,5 @@ public class CoinSound : MonoBehaviour
         {
             audioSource.PlayOneShot(Heartsound);
         }
-
     }
 }

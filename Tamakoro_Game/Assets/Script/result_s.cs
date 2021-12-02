@@ -25,7 +25,7 @@ public class result_s : MonoBehaviour
         int seconds = Mathf.FloorToInt(countTime - minutes * 60);
 
         countTime += Time.deltaTime;
-       ;
+       
 
         if (coin.count == 12)
         {

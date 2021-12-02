@@ -73,6 +73,7 @@ public class GameClear : MonoBehaviour
     {
         if (coin.count == 12)
         {
+            GetComponent<AudioSource>().Stop();
             yield return new WaitForSecondsRealtime(1);
         }
         clearPanel.SetActive(false);
@@ -81,7 +82,7 @@ public class GameClear : MonoBehaviour
         {
             resultPanel.SetActive(true);
             resultflg = true;
-
+            
         }
     }
 }

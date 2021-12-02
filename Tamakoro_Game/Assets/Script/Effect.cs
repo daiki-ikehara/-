@@ -8,7 +8,7 @@ public class Effect : MonoBehaviour
     [SerializeField]
     private ParticleSystem footSmoke;
     private Rigidbody rb;
-    
+
     [SerializeField]
     private ParticleSystem Light;
     [SerializeField]
@@ -76,9 +76,12 @@ public class Effect : MonoBehaviour
         // 速度が0.1以上なら
         if (rb.velocity.magnitude > 0.1f)
         {
+            
             // 再生
             if (!footSmoke.isEmitting)
             {
+                Debug.Log("sound再生");
+                GetComponent<AudioSource>().Play();
                 footSmoke.Play();
             }
         }
@@ -87,7 +90,8 @@ public class Effect : MonoBehaviour
             // 停止
             if (footSmoke.isEmitting)
             {
-                footSmoke.Stop();
+                footSmoke.Pause();
+                GetComponent<AudioSource>().Stop();
             }
         }
     }
